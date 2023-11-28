@@ -1,0 +1,49 @@
+.client-contract {
+  display: flex;
+  align-items: flex-start;
+  color: var(--main-text);
+  background-color: var(--main-bg);
+
+  &.is-closed {
+    & .client-contract__content {
+      filter: grayscale(1) opacity(0.7);
+      pointer-events: none;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-grow: 1;
+    border-radius: 4px 0 4px 4px;
+    box-shadow: 1px 3px 16px 0 rgba(55, 73, 87, 0.08);
+  }
+
+  &__menu {
+    flex-shrink: 0;
+  }
+
+  &__main {
+    flex-grow: 1;
+  }
+
+  &__info {
+    padding: 20px;
+    background-color: var(--main-bg-light);
+  }
+
+  &__subscribes {
+    padding: 20px;
+  }
+
+  &__programm {
+    padding: 20px 30px;
+    flex-shrink: 0;
+    background-color: var(--main-bg-light);
+    width: 270px;
+    border-left: 1px solid var(--border);
+  }
+
+  &__message {
+    padding: 20px;
+  }
+}

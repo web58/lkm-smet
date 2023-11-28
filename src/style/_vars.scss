@@ -1,0 +1,37 @@
+:root {
+  --black: #070B0D;
+  --white: #FFFFFF;
+  --white5: #F9F9F9;
+  --white10: #FBFBFC;
+  --blue: #0D7ED6;
+  --blue5: rgba(0, 132, 204, 0.05);
+  --blue40: rgba(0, 132, 204, 0.4);
+  --dark-blue: #374957;
+  --orange: #FA6009;
+  --orange15: rgba(250, 96, 9, 0.16);
+  --light-gray: #F0F1F1;
+  --gray: #787D82;
+  --medium-gray: #B9BEC3;
+  --green: #19BF16;
+  --green15: rgba(25, 191, 22, 0.16);
+  --red: #E90D00;
+  --red30: #FFE2E0;
+  --yellow: #FF9F0F;
+  --yellow15: rgba(255, 159, 15, 0.1);
+  --purple: #9F2DF9;
+  --purple15: rgba(159, 45, 249, 0.15);
+
+  // colors cascade
+  --main-text: var(--dark-blue);
+  --main-text-dark: var(--black);
+  --main-bg: var(--white5);
+  --main-bg-light: var(--white);
+  --main-bg-dark: var(--black);
+  --accent: var(--blue);
+  --error: var(--orange);
+  --warning: var(--orange);
+  --border: var(--light-gray);
+  --activity-color: var(--green);
+}
+
+$main-font: "Inter";

@@ -1,0 +1,30 @@
+.client-info {
+  display: grid;
+  row-gap: 16px;
+
+  &__item {
+    position: relative;
+    display: flex;
+    color: var(--main-text);
+    background-color: var(--main-bg-light);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    max-width: 915px;
+  }
+
+  &__programm {
+    width: 230px;
+    border-right: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+
+  &__contract {
+    flex-grow: 1;
+  }
+
+  @include media-min (1600px) {
+    &__programm {
+      width: 280px;
+    }
+  }
+}

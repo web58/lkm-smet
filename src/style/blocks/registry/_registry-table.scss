@@ -1,0 +1,144 @@
+.registry-table {
+  --bg-color: var(--white);
+  --bg-color-alt: var(--white10);
+  --border: #EBEBEB;
+  --row-hover-bg: #FFF5E7;
+
+  position: fixed;
+  top: calc(var(--header-height) + var(--instruments-panel-height));
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: auto;
+  min-width: var(--min-screen-width);
+
+  &__body {
+    & .registry-table__row {
+      &:hover>.registry-table__cell {
+        background-color: var(--row-hover-bg);
+      }
+    }
+  }
+
+  &__row {
+    display: grid;
+    justify-content: start;
+    grid-auto-flow: column;
+
+    & .registry-table__cell {
+      color: var(--main-text);
+      background-color: var(--bg-color);
+      border-width: 1px;
+      border-style: solid;
+      border-color: transparent;
+      border-bottom-color: var(--border);
+      border-right-color: var(--border);
+    }
+
+    &:nth-child(2n) {
+      & .registry-table__cell {
+        background-color: var(--bg-color-alt);
+      }
+    }
+
+    &:last-of-type:not(:first-of-type) {
+      & .registry-table__cell {
+        border-bottom-color: transparent;
+      }
+    }
+  }
+
+  &__cell {
+    padding: 16px;
+    font-size: 14px;
+    transition: background-color .2s ease-in-out;
+
+    &:last-child {
+      border-right-color: transparent;
+    }
+
+    &--w100 {
+      width: 100px;
+    }
+
+    &--w110 {
+      width: 110px;
+    }
+
+    &--w120 {
+      width: 120px;
+    }
+
+    &--w130 {
+      width: 130px;
+    }
+
+    &--w140 {
+      width: 140px;
+    }
+
+    &--w150 {
+      width: 150px;
+    }
+
+    &--w160 {
+      width: 160px;
+    }
+
+    &--w170 {
+      width: 170px;
+    }
+
+    &--w180 {
+      width: 180px;
+    }
+
+    &--w190 {
+      width: 190px;
+    }
+
+    &--w200 {
+      width: 200px;
+    }
+
+    &--w210 {
+      width: 210px;
+    }
+
+    &--w220 {
+      width: 220px;
+    }
+
+    &--w230 {
+      width: 230px;
+    }
+
+    &--w240 {
+      width: 240px;
+    }
+
+    &--w250 {
+      width: 250px;
+    }
+
+    &--w260 {
+      width: 260px;
+    }
+
+    &--w270 {
+      width: 270px;
+    }
+
+    &--w280 {
+      width: 280px;
+    }
+
+    &--w290 {
+      width: 290px;
+    }
+
+    &--w300 {
+      width: 300px;
+    }
+  }
+}

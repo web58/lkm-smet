@@ -1,0 +1,37 @@
+<div class="client-commentaries">
+  <form class="client-commentaries__form">
+    <textarea class="form-field client-commentaries__textarea"
+              name="Комментарий"
+              placeholder="Напишите комментарий..."></textarea>
+    <button class="btn-reset client-commentaries__submit-btn"
+            type="submit"
+            aria-label="Отправить комментарий">
+      <svg width="16"
+           height="16"
+           aria-hidden="true">
+        <use xlink:href="img/sprite.svg#icon-send"></use>
+      </svg>
+    </button>
+  </form>
+  <div class="client-commentaries__board">
+    @if(context.noComments){<span class="client-commentaries__no-result-note">Уведомлений пока нет</span>}
+    @if(!context.noComments){
+    <div class="client-commentaries__visibility-controls">
+      <button class="btn-reset client-commentaries__visibility-toggler is-active"
+              type="button">
+        <svg width="16"
+             height="16"
+             aria-hidden="true">
+          <use xlink:href="img/sprite.svg#icon-eye"></use>
+        </svg>
+        <span>Убрать скрытые</span>
+      </button>
+    </div>
+    <div class="client-commentaries__list">
+      @include('../../common/comment-component.html',{isPinned: true})
+      @include('../../common/comment-component.html')
+      @include('../../common/comment-component.html',{isHide: true})
+    </div>
+    }
+  </div>
+</div>

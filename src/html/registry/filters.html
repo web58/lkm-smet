@@ -1,0 +1,36 @@
+<div class="registry-filters">
+  <form class="registry-filters__form"
+        method="get">
+    <h2 class="indent-reset registry-filters__title">Показ столбцов</h2>
+    <div class="registry-filters__check-all">
+      <button class="btn-reset"
+              type="button">Выбрать все</button>
+    </div>
+    <ul class="list-reset registry-filters__list">
+      <li class="registry-filters__item">@include('../common/checkbox-component.html', {label: 'Клиент', name: 'Клиент', checked: true})</li>
+      <li class="registry-filters__item">@include('../common/checkbox-component.html', {label: 'Маршрут', name: 'Маршрут', checked: true})</li>
+      <li class="registry-filters__item">@include('../common/checkbox-component.html', {label: 'Адрес', name: 'Адрес', checked: true})</li>
+      <li class="registry-filters__item">@include('../common/checkbox-component.html', {label: 'ФИО', name: 'ФИО', checked: true})</li>
+      <li class="registry-filters__item">@include('../common/checkbox-component.html', {label: 'Телефон', name: 'Телефон', checked: true})</li>
+      <li class="registry-filters__item">@include('../common/checkbox-component.html', {label: 'E-mail', name: 'E-mail', checked: true})</li>
+      <li class="registry-filters__item">@include('../common/checkbox-component.html', {label: 'Ключ', name: 'Ключ', checked: true})</li>
+      <li class="registry-filters__item">@include('../common/checkbox-component.html', {label: 'Программа', name: 'Программа', checked: true})</li>
+      <li class="registry-filters__item">@include('../common/checkbox-component.html', {label: 'Версия', name: 'Версия', checked: true})</li>
+      <li class="registry-filters__item">@include('../common/checkbox-component.html', {label: 'Поддержка до', name: 'Поддержка до', checked: true})</li>
+      <li class="registry-filters__item">@include('../common/checkbox-component.html', {label: 'ФЕР: версия', name: 'ФЕР: версия', checked: true})</li>
+      <li class="registry-filters__item">@include('../common/checkbox-component.html', {label: 'ФЕР: подписка', name: 'ФЕР: подписка', checked: true})</li>
+      <li class="registry-filters__item">@include('../common/checkbox-component.html', {label: 'Договор', name: 'Договор', checked: true})</li>
+      <li class="registry-filters__item">@include('../common/checkbox-component.html', {label: 'Срок договора', name: 'Срок договора', checked: true})</li>
+      <li class="registry-filters__item">@include('../common/checkbox-component.html', {label: 'Менеджер', name: 'Менеджер', checked: true})</li>
+      <li class="registry-filters__item">@include('../common/checkbox-component.html', {label: 'Ключ SB', name: 'Ключ SB', checked: true})</li>
+      <li class="registry-filters__item">@include('../common/checkbox-component.html', {label: 'Секрет SB', name: 'Секрет SB', checked: true})</li>
+      <li class="registry-filters__item">@include('../common/checkbox-component.html', {label: 'Путь к архиву SB', name: 'Путь к архиву SB', checked: true})</li>
+    </ul>
+    <div class="registry-filters__form-bottom">
+      <button class="btn-reset btn"
+              type="submit">Применить</button>
+      <button class="btn-reset btn btn--second"
+              type="button">По умолчанию</button>
+    </div>
+  </form>
+</div>

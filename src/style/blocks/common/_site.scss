@@ -1,0 +1,32 @@
+.site {
+  --min-screen-width: 960px;
+  --header-height: 65px;
+  --instruments-panel-height: 75px;
+  --main-offset: var(--header-height);
+  --aside-width: 240px;
+  --aside-toggler-width: 16px;
+
+  &__container {
+    padding-top: var(--main-offset);
+    display: flex;
+    min-height: calc(100 * var(--vh, 1vh));
+  }
+
+  &__header {
+    flex-shrink: 0;
+  }
+
+  &__aside {
+    &+.site__content {
+      flex-basis: 100%;
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
+  }
+
+  &__footer {
+    flex-shrink: 0;
+  }
+}

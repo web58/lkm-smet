@@ -1,0 +1,60 @@
+.context-menu {
+  --btn-color: var(--dark-blue);
+  --btn-bg-color: var(--light-gray);
+  --btn-offset: 12px;
+  --menu-item-hover: var(--blue5);
+
+  position: relative;
+
+  &.is-expand {
+    --btn-color: var(--white);
+    --btn-bg-color: var(--gray);
+
+    .context-menu__list {
+      display: block;
+    }
+  }
+
+  &__trigger {
+    display: inline-flex;
+    padding: var(--btn-offset);
+    color: var(--btn-color);
+    background-color: var(--btn-bg-color);
+    border-radius: 0 4px 4px 0;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  }
+
+  &__list {
+    display: none;
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    z-index: 1;
+    color: var(--main-text);
+    background-color: var(--main-bg-light);
+    border-radius: 4px;
+    border: 1px solid var(--border);
+
+    @include anim(fade-down, 0.3s);
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 10px 12px;
+    color: inherit;
+    min-width: 200px;
+    text-align: left;
+    transition: background-color 0.15s ease-in-out;
+
+    &:hover {
+      background-color: var(--menu-item-hover);
+    }
+  }
+
+  @include media-min (1440px) {
+    &__list {
+      right: auto;
+      left: 6px;
+    }
+  }
+}

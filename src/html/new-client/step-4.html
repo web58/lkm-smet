@@ -1,0 +1,82 @@
+<form class="add-client__form">
+  <h2 class="indent-reset add-client__subtitle">Договор</h2>
+  <div class="add-client__form-inner">
+    <label class="add-client__form-item">
+      <span class="form-label">Тип договора</span>
+      <select class="form-field form-field--select"
+              name="Тип договора">
+        <option value="Договор демо-доступ">Договор демо-доступ</option>
+        <option value="Значение">Значение</option>
+        <option value="Значение">Значение</option>
+        <option value="Значение">Значение</option>
+        <option value="Значение">Значение</option>
+      </select>
+    </label>
+    <label class="add-client__form-item">
+      <span class="form-label">Номер договора</span>
+      <input class="form-field"
+             type="text"
+             name="Номер договора"
+             value="Демо-доступ 129/2022/78">
+    </label>
+    <label class="add-client__form-item">
+      <span class="form-label">Тариф</span>
+      <select class="form-field form-field--select"
+              name="Тариф">
+        <option value="ЛО">ЛО</option>
+        <option value="Значение">Значение</option>
+        <option value="Значение">Значение</option>
+        <option value="Значение">Значение</option>
+        <option value="Значение">Значение</option>
+      </select>
+    </label>
+    <label class="add-client__form-item add-client__form-item--half">
+      <span class="form-label">Дата начала</span>
+      <input class="form-field"
+             type="text"
+             name="Дата начала"
+             value="16.02.2020">
+    </label>
+    <label class="add-client__form-item add-client__form-item--half">
+      <span class="form-label">Дата окончания</span>
+      <input class="form-field"
+             type="text"
+             name="Дата окончания"
+             value="17.02.2024">
+    </label>
+    <div class="add-client__form-item add-client__checkboxes">
+      <h3 class="indent-reset add-client__checkboxes-title">Доступные разделы</h3>
+      <ul class="list-reset add-client__checkboxes-list">
+        <li>@include('../common/checkbox-component.html', {label: 'Новости', name: 'Новости', checked: true})</li>
+        <li>@include('../common/checkbox-component.html', {label: 'Главное', name: 'Главное', checked: true})</li>
+        <li>@include('../common/checkbox-component.html', {label: 'Ценообразование', name: 'Ценообразование', checked: true})</li>
+        <li>@include('../common/checkbox-component.html', {label: 'Подбор расценок', name: 'Подбор расценок', checked: true})</li>
+        <li>@include('../common/checkbox-component.html', {label: 'Консультации', name: 'Консультации', checked: true})</li>
+        <li>@include('../common/checkbox-component.html', {label: 'Смета.РУ', name: 'Смета.РУ', checked: true})</li>
+        <li>@include('../common/checkbox-component.html', {label: 'АтомСмета', name: 'АтомСмета', checked: true})</li>
+        <li>@include('../common/checkbox-component.html', {label: 'ГЭСН, ФЕР, ТЕР', name: 'ГЭСН, ФЕР, ТЕР', checked: true})</li>
+        <li>@include('../common/checkbox-component.html', {label: 'ТСН', name: 'ТСН', checked: true})</li>
+        <li>@include('../common/checkbox-component.html', {label: 'СН-2012', name: 'СН-2012', checked: true})</li>
+        <li>@include('../common/checkbox-component.html', {label: 'ПИР', name: 'ПИР', checked: false})</li>
+        <li>@include('../common/checkbox-component.html', {label: 'Семинары', name: 'Семинары', checked: false})</li>
+        <li>@include('../common/checkbox-component.html', {label: 'ДЕМО', name: 'ДЕМО', checked: false})</li>
+        <li>@include('../common/checkbox-component.html', {label: '58 Пензенская область', name: '58 Пензенская область', checked: false})</li>
+      </ul>
+    </div>
+    <div class="add-client__form-item add-client__form-bottom">
+      <button class="btn-reset btn"
+              type="button">Сохранить и выйти</button>
+      <button class="btn-reset btn btn--second"
+              type="button">Сохранить и перейти в карточку</button>
+      <button class="btn-reset btn btn--second"
+              type="button">
+        <svg width="16"
+             height="16"
+             aria-hidden="true">
+          <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+        </svg>
+        <span>Назад</span>
+      </button>
+    </div>
+  </div>
+</form>

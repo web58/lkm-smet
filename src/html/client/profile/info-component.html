@@ -1,0 +1,44 @@
+<li class="client-info__item">
+  <div class="client-info__programm profile-programm@if(context.isExpiresKey){ is-expires}@if(context.isExpiredKey){ is-expired}@if(context.isDeactivated){ is-deactivated}@if(context.hasUpdate){ has-update}">
+    <img class="profile-programm__icon"
+         src="img/default/programs/grand-smeta-icon.png"
+         width="32"
+         height="32"
+         alt="">
+    <div class="profile-programm__title">
+      <span class="profile-programm__label">Гранд-Смета</span>
+      <span class="profile-programm__version">2023.343.43.1</span>
+    </div>
+    <div class="profile-programm__key">
+      <a href="page-client-programm.html">FSTS-28180</a>
+    </div>
+    <div>
+      <div class="profile-programm__date-label">Действует до</div>
+      <div class="profile-programm__date">
+        <svg width="16"
+             height="16"
+             aria-hidden="true">
+          <use xlink:href="img/sprite.svg#icon-calendar"></use>
+        </svg>
+        <span>17.02.2024</span>
+      </div>
+    </div>
+  </div>
+  <div class="client-info__contract profile-contract@if(context.isExpiresContract){ is-expires}@if(context.isExpiredContract){ is-expired}@if(context.isClosed){ is-closed}">
+    <div class="profile-contract__label">Договор демо-доступ</div>
+    <div class="profile-contract__title"><a href="page-client-contracts.html">Демо-доступ 129/2022/78</a></div>
+    <div class="profile-contract__bottom">
+      <div class="profile-contract__tariff">Тариф: <span>ЛО</span></div>
+      <div class="profile-contract__period">
+        <svg width="16"
+             height="16"
+             aria-hidden="true">
+          <use xlink:href="img/sprite.svg#icon-calendar"></use>
+        </svg>
+        <span>
+          <span class="profile-contract__date-from">16.08.2022 </span> &ndash; <span class="profile-contract__date-to">15.08.2023</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</li>

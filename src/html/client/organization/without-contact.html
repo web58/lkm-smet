@@ -1,0 +1,6 @@
+<div class="client-organization">
+  @include('card.html', {isValid: true})
+  <div>У органицации нет контактных лиц</div>
+</div>
+@include('../../common/modal-component.html', {template: '../client/organization/side-edit-organization', id: 'edit-organization', isSide: true})
+@include('../../common/modal-component.html', {template: '../client/organization/side-create-contact', id: 'add-contact', isSide: true})

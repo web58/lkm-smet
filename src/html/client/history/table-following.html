@@ -1,0 +1,39 @@
+<table class="client-history__table">
+  <thead>
+    <tr>
+      <th>Дата</th>
+      <th>Время</th>
+      <th>Адрес страницы</th>
+    </tr>
+  </thead>
+  <tboby>
+    @if(context.isEmpty){
+    <tr>
+      <td class="is-hidden-cell"
+          colspan="3">@noResultText</td>
+    </tr>
+    }
+    @if(!context.isEmpty){
+    <tr>
+      <td>01.10.2022</td>
+      <td>10:22:35</td>
+      <td><a href="#">Металлокалькуляторы</a></td>
+    </tr>
+    <tr>
+      <td>10.01.2023</td>
+      <td>14:12:04</td>
+      <td><a href="#">Мои программы</a></td>
+    </tr>
+    <tr>
+      <td>12.01.2023</td>
+      <td>21:35:32</td>
+      <td><a href="#">История поиска</a></td>
+    </tr>
+    <tr>
+      <td>25.02.2023</td>
+      <td>11:15:42</td>
+      <td><a href="#">Металлокалькуляторы</a></td>
+    </tr>
+    }
+  </tboby>
+</table>

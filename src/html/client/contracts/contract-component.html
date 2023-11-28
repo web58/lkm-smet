@@ -1,0 +1,121 @@
+<li class="client-contract@if(context.isClosed){ is-closed}">
+  <div class="client-contract__content">
+    <div class="client-contract__main@if(context.isExpiresContract){ is-expires}@if(context.isExpiredContract){ is-expired}">
+      <div class="client-contract__info contract-info">
+        <div class="contract-info__row contract-info__row--top">
+          <div class="contract-info__type">Договор демо-доступ</div>
+          <div class="contract-info__tariff">Тариф: ЛО</div>
+        </div>
+        <div class="contract-info__row">
+          <div class="contract-info__title">Демо-доступ 129/2022/78</div>
+          <div class="contract-info__period">
+            <svg width="16"
+                 height="16"
+                 aria-hidden="true">
+              <use xlink:href="img/sprite.svg#icon-calendar"></use>
+            </svg>
+            <span>
+              <span class="contract-info__date-from">16.08.2022 </span> &ndash; <span class="contract-info__date-to">15.08.2023</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      @if(!context.isClosed){
+      <div class="client-contract__subscribes client-subscribes">
+        <div class="client-subscribes__top">
+          <span class="client-subscribes__top-title">Подписки</span>
+          <button class="btn-reset client-subscribes__visibility-toggler@if(!context.hideSubscribes){ is-active}">
+            <svg width="16"
+                 height="16"
+                 aria-hidden="true">
+              <use xlink:href="img/sprite.svg#icon-eye"></use>
+            </svg>
+            <span>@if(!context.hideSubscribes){ Скрыть}@if(context.hideSubscribes){ Показать}</span>
+          </button>
+        </div>
+        <table class="client-subscribes__table@if(context.hideSubscribes){ is-active}">
+          <thead>
+            <tr>
+              <th>Наименование</th>
+              <th>Рассылка</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="client-subscribe">
+              <td><span>СН-2012</span></td>
+              <td class="client-subscribe__status">
+                <svg width="14"
+                     height="14"
+                     aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#icon-envelope"></use>
+                </svg>
+                <span>Включена</span></td>
+            </tr>
+            <tr class="client-subscribe is-disabled">
+              <td><span>Подбор расценок</span></td>
+              <td class="client-subscribe__status">
+                <svg width="14"
+                     height="14"
+                     aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#icon-envelope"></use>
+                </svg>
+                <span>Выключена</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      }
+      @if(context.isClosed){
+      <div class="client-contract__message">
+        <span>Причина закрытия договора: Текст причины</span>
+      </div>
+      }
+    </div>
+    <div class="client-contract__programm contract-programm@if(context.isExpiresKey){ is-expires}@if(context.isExpiredKey){ is-expired}@if(context.isDeactivated){ is-deactivated}@if(context.hasUpdate){ has-update}">
+      <img class="contract-programm__icon"
+           src="img/default/programs/grand-smeta-icon.png"
+           width="48"
+           height="48"
+           alt="">
+      <div class="contract-programm__title">
+        <span class="contract-programm__label">Гранд-Смета</span>
+        <span class="contract-programm__version">2023.343.43.1</span>
+      </div>
+      <div class="contract-programm__key">FSTS-28180</div>
+      <div class="contract-programm__date">
+        <svg width="16"
+             height="16"
+             aria-hidden="true">
+          <use xlink:href="img/sprite.svg#icon-calendar"></use>
+        </svg>
+        <span>17.02.2024</span>
+      </div>
+    </div>
+  </div>
+  <div class="client-contract__menu context-menu"
+       data-context-menu>
+    <button class="btn-reset context-menu__trigger"
+            type="button"
+            data-trigger>
+      <svg width="16"
+           height="16"
+           aria-hidden="true">
+        <use xlink:href="img/sprite.svg#icon-settings"></use>
+      </svg>
+    </button>
+    <ul class="list-reset context-menu__list"
+        data-list>
+      <li>
+        <button class="btn-reset context-menu__btn"
+                type="button"
+                data-modal="#edit-contract">Редактировать</button>
+      </li>
+      <li>
+        <button class="btn-reset context-menu__btn"
+                type="button"
+                @if(!context.isClosed){data-modal="#close-contract"
+                }>@if(!context.isClosed){Закрыть договор}@if(context.isClosed){Вернуть активность}</button>
+      </li>
+    </ul>
+  </div>
+</li>

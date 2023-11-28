@@ -1,0 +1,139 @@
+<li class="client-programm@if(context.isDeactivated){ is-deactivated}@if(context.hasUpdate){ has-update}">
+  <div class="client-programm__content">
+    <div class="client-programm__main@if(context.isExpires){ is-expires}@if(context.isExpired){ is-expired}">
+      <img class="client-programm__icon"
+           src="img/default/programs/grand-smeta-icon.png"
+           width="48"
+           height="48"
+           alt="">
+      <div class="client-programm__meta">
+        <div class="client-programm__title">
+          <span class="client-programm__label">Гранд-Смета</span> <span class="client-programm__version">2023.1</span></div>
+        <div><span class="client-programm__current-key">FSTS-28180</span> <span class="client-programm__prev-key">4488-176</span></div>
+      </div>
+      <div class="client-programm__date-meta">
+        <div class="client-programm__date-label">Действует до</div>
+        <div class="client-programm__date">
+          <svg width="16"
+               height="16"
+               aria-hidden="true">
+            <use xlink:href="img/sprite.svg#icon-calendar"></use>
+          </svg>
+          <span>17.02.2024</span>
+        </div>
+      </div>
+      <div class="client-programm__badges">
+        @if(context.hasUpdate){
+        <span class="client-programm__badge client-programm__badge--has-update">Есть обновление
+          <span>Актуальная версия ХХХХХХ</span>
+        </span>
+        }
+        @if(context.hasSupport){
+        <span class="client-programm__badge client-programm__badge--supported">Поддержка разработчика</span>
+        }
+        @if(!context.hasSupport) {
+        <span class="client-programm__badge client-programm__badge--not-supported">Не поддерживается
+          <span>Данная версия программы не поддерживается разработчиком. Отгрузка НБ, КТЦ, Индексов невозможна. Требуется обновить версию программы.</span>
+        </span>
+        }
+      </div>
+    </div>
+    @if(!context.isDeactivated){
+    <div class="client-programm__base client-programm-base">
+      <div class="client-programm-base__top">
+        <span class="client-programm-base__top-title">Нормативные базы</span>
+        <button class="btn-reset client-programm-base__visibility-toggler@if(!context.hideCanceledBase){ is-active}">
+          <svg width="16"
+               height="16"
+               aria-hidden="true">
+            <use xlink:href="img/sprite.svg#icon-eye"></use>
+          </svg>
+          <span>@if(!context.hideCanceledBase){ Скрыть отмененные}@if(context.hideCanceledBase){ Показать отмененные}</span>
+        </button>
+      </div>
+      <table class="client-programm-base__table@if(context.hideCanceledBase){ is-active}">
+        <thead>
+          <tr>
+            <th>Наименование</th>
+            <th>Версия</th>
+            <th>Подписка до</th>
+            <th>Отменена</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="programm-base">
+            <td class="programm-base__title">ТЕР Пензенской области</td>
+            <td>ред. 2014 г. доп. 0</td>
+            <td class="programm-base__subscribe-date">&ndash;</td>
+            <td class="programm-base__cancel-date">&ndash;</td>
+          </tr>
+          <tr class="programm-base is-expires">
+            <td class="programm-base__title">ГЭСН, ФЕР</td>
+            <td>ред. 2020 г. доп. 9</td>
+            <td class="programm-base__subscribe-date">29.06.2023</td>
+            <td class="programm-base__cancel-date">&ndash;</td>
+          </tr>
+          <tr class="programm-base is-expired">
+            <td class="programm-base__title">ГЭСН, ФЕР</td>
+            <td>ред. 2020 г. доп. 8</td>
+            <td class="programm-base__subscribe-date">31.01.2022</td>
+            <td>&ndash;</td>
+          </tr>
+          <tr class="programm-base is-canceled">
+            <td class="programm-base__title">ГЭСН, ФЕР</td>
+            <td>ред. 2020 г. доп. 8</td>
+            <td class="programm-base__subscribe-date">&ndash;</td>
+            <td class="programm-base__cancel-date">31.01.2022</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <footer class="client-programm__footer">
+      <button class="btn-reset btn btn--second">
+        <svg width="14"
+             height="14"
+             aria-hidden="true">
+          <use xlink:href="img/sprite.svg#icon-add"></use>
+        </svg>
+        <span>Добавить базу</span>
+      </button>
+    </footer>
+    }
+    @if(context.isDeactivated){
+    <footer class="client-programm__footer">
+      <span>Причина снятия активности: Текст причины</span>
+    </footer>
+    }
+  </div>
+  <div class="client-programm__menu context-menu"
+       data-context-menu>
+    <button class="btn-reset context-menu__trigger"
+            type="button"
+            data-trigger>
+      <svg width="16"
+           height="16"
+           aria-hidden="true">
+        <use xlink:href="img/sprite.svg#icon-settings"></use>
+      </svg>
+    </button>
+    <ul class="list-reset context-menu__list"
+        data-list>
+      <li>
+        <button class="btn-reset context-menu__btn"
+                type="button"
+                data-modal="#edit-programm">Редактировать</button>
+      </li>
+      <li>
+        <button class="btn-reset context-menu__btn"
+                type="button"
+                data-modal="#delete-programm">Удалить</button>
+      </li>
+      <li>
+        <button class="btn-reset context-menu__btn"
+                type="button"
+                @if(!context.isDeactivated){data-modal="#deactivate-programm"
+                }>@if(!context.isDeactivated){Снять активность}@if(context.isDeactivated){Вернуть активность}</button>
+      </li>
+    </ul>
+  </div>
+</li>

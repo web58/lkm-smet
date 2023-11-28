@@ -1,0 +1,17 @@
+<section class="modal"
+         id="@id"
+         aria-hidden="true">
+  <div class="modal__inner@if(context.isSide){ modal__inner--side}">
+    <button class="btn-reset modal__close@if(context.isSide){ modal__close--side}"
+            type="button"
+            data-close-modal
+            aria-label="Закрыть окно">
+      <svg width="16"
+           height="16"
+           aria-hidden="true">
+        <use xlink:href="img/sprite.svg#icon-cross"></use>
+      </svg>
+    </button>
+    @if(context.template){@include('@template.html')}
+  </div>
+</section>

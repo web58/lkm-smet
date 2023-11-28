@@ -1,0 +1,43 @@
+<section class="client-organization-card">
+  <h2 class="indent-reset client-organization-card__title">Данные об организации</h2>
+  <div class="client-organization-card__fields">
+    <div class="client-organization-card__field">
+      <div class="client-organization-card__label">Организация</div>
+      <div>ООО Организация</div>
+    </div>
+    <div class="client-organization-card__field">
+      <div class="client-organization-card__label">Телефон</div>
+      <div>+7 (900) 000-00-00</div>
+    </div>
+    <div class="client-organization-card__field">
+      <div class="client-organization-card__label">Регион</div>
+      <div>Пензенская область</div>
+    </div>
+    <div class="client-organization-card__field">
+      <div class="client-organization-card__label">Фактический адрес:</div>
+      <div>г. Кузнецк, ул. Ленина, 19, оф. 109</div>
+    </div>
+    <div class="client-organization-card__field">
+      <div class="client-organization-card__label">Почтовый адрес:</div>
+      <div>г. Кузнецк, ул. Ленина, 19, оф. 109</div>
+    </div>
+    <div class="client-organization-card__field">
+      <div class="client-organization-card__label">ИНН</div>
+      <div>561246783012</div>
+    </div>
+  </div>
+  <button class="btn-reset btn btn--second client-organization-card__edit-btn"
+          type="button"
+          @if(!context.editor){data-modal="#edit-organization"
+          }
+          @if(context.editor==='tabs'
+          ){data-modal="#edit-organization-tabs"
+          }>
+    <svg width="16"
+         height="16"
+         aria-hidden="true">
+      <use xlink:href="img/sprite.svg#icon-edit"></use>
+    </svg>
+    <span>Изменить</span>
+  </button>
+</section>

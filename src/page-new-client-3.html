@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  @include('html/head/index.html')
+  <title>Добавление клиента</title>
+</head>
+
+<body class="indent-reset site">
+  @include('html/header/index.html', {current: 'client'})
+  <div class="site__container">
+    <main class="site__content">
+      @include('html/new-client/index.html', {step: 'step-3'})
+    </main>
+  </div>
+  @include('html/common/scripts.html')
+</body>
+
+</html>

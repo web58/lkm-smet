@@ -1,0 +1,39 @@
+.client-organization-card {
+  padding: 20px;
+  color: var(--main-text);
+  background-color: var(--main-bg-light);
+  border-radius: 4px;
+  box-shadow: 1px 3px 16px 0 rgba(55, 73, 87, 0.08);
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  &__fields {
+    display: grid;
+    row-gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  &__field {
+    display: grid;
+    row-gap: 8px;
+    padding-bottom: 12px;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid var(--border);
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--accent);
+  }
+
+  &__edit-btn {
+    width: 100%;
+  }
+}

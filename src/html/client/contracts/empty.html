@@ -1,0 +1,4 @@
+@include('notes.html', {noNotes: true})
+<div>У клиента еще нет ни одного договора</div>
+@include('../../common/modal-component.html', {template: '../client/contracts/side-create', id: 'add-contract', isSide: true})
+@include('../../common/modal-component.html', {template: '../client/contracts/side-notes', id: 'edit-notes', isSide: true})

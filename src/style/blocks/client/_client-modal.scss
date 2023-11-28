@@ -1,0 +1,46 @@
+.client-modal {
+  width: 480px;
+
+  &__title {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  &__note {
+    margin-bottom: 30px;
+  }
+
+  &__comment {
+    display: block;
+    margin-bottom: 30px;
+
+    &>span {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--accent);
+    }
+
+    &>textarea {
+      width: 100%;
+      height: 5em;
+      padding: 14px 12px;
+      font-size: 16px;
+      color: var(--main-text);
+      border: 1px solid transparent;
+      background-color: var(--main-bg);
+      border-radius: 4px;
+      appearance: none;
+      outline-offset: 1px;
+      outline-color: var(--accent);
+      resize: none;
+    }
+  }
+
+  &__controls {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+  }
+}

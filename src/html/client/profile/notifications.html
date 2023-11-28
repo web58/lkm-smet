@@ -1,0 +1,42 @@
+<div class="client-notifications"
+     data-tabs="notifications">
+  <ul class="list-reset client-notifications__tabs-nav"
+      data-tabs="nav">
+    <li>
+      <button class="btn-reset client-notifications__tabs-nav-btn"
+              type="button"
+              data-tabs="btn">Уведомления</button>
+    </li>
+    <li>
+      <button class="btn-reset client-notifications__tabs-nav-btn"
+              type="button"
+              data-tabs="btn">Рекомендации</button>
+    </li>
+  </ul>
+  <div class="client-notifications__board">
+    <div data-tabs="panel">
+      @if(context.noNotes){<span class="client-notifications__no-result-note">Уведомлений пока нет</span>}
+      @if(!context.noNotes) {
+      <div class="client-notifications__item-list">
+        @include('../../common/note-component.html', {type: 'programm', typeLabel: 'Программа', isChecked: true})
+        @include('../../common/note-component.html', {type: 'base', typeLabel: 'Нормативная база', isChecked: false})
+        @include('../../common/note-component.html', {type: 'contract', typeLabel: 'Договор', isChecked: false})
+      </div>
+      <div class="client-notifications__link">
+        <a href="page-client-notifications.html">Смотреть все</a>
+      </div>
+      }
+    </div>
+    <div data-tabs="panel">
+      @if(context.noRecomends){<span class="client-notifications__no-result-note">Рекомендаций пока нет</span>}
+      @if(!context.noRecomends){
+      <div class="client-notifications__item-list">
+        <p>Функция в разработке</p>
+      </div>
+      <div class="client-notifications__link">
+        <a href="page-client-recomendations.html">Смотреть все</a>
+      </div>
+      }
+    </div>
+  </div>
+</div>

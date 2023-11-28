@@ -1,0 +1,21 @@
+.client-profile {
+  &__main {
+    display: grid;
+    grid-template-columns: minmax(375px, auto) 1fr;
+    align-items: start;
+    column-gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  &__footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    column-gap: 30px;
+  }
+}

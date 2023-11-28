@@ -1,0 +1,37 @@
+.contract-info {
+  &__row {
+    display: flex;
+
+    &--top {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__type {
+    font-weight: 600;
+    flex-grow: 1;
+  }
+
+  &__tariff {
+    font-weight: 600;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    flex-grow: 1;
+    color: var(--activity-color);
+  }
+
+  &__period {
+    display: flex;
+    align-items: center;
+
+    & svg {
+      width: 16px;
+      height: 16px;
+      color: var(--activity-color);
+      margin-right: 8px;
+    }
+  }
+}

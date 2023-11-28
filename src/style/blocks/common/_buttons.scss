@@ -1,0 +1,41 @@
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--btn-fz, 14px);
+  font-weight: 500;
+  line-height: 1.2;
+  padding: var(--btn-offset, var(--btn-offset-vertical, 14px) var(--btn-offset-horizontal, 20px));
+  color: var(--btn-color, var(--white));
+  background-color: var(--btn-bg, var(--accent));
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity var(--btn-timing, .2s) ease-in-out;
+
+  & svg {
+    margin-right: 8px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &--second {
+    --btn-color: var(--accent);
+    --btn-bg: var(--blue5);
+  }
+
+  &--third {
+    --btn-color: var(--orange);
+    --btn-bg: var(--orange15);
+  }
+
+  &--icon-reverse {
+    & svg {
+      margin-right: 0;
+      margin-left: 8px;
+    }
+  }
+
+}

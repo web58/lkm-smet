@@ -1,0 +1,19 @@
+.client-subscribe {
+  --activity-subscribe-color: var(--green);
+
+  &.is-disabled {
+    --activity-subscribe-color: var(--main-text);
+
+    filter: grayscale(1) opacity(0.7);
+  }
+
+  &__status {
+    & svg {
+      color: var(--activity-subscribe-color);
+    }
+
+    & span {
+      @include visually-hidden;
+    }
+  }
+}

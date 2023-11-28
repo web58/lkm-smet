@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  @include('html/head/index.html')
+  <title>Обращение в ТП</title>
+</head>
+
+<body class="indent-reset site">
+  @include('html/header/index.html')
+  <div class="site__container">
+    <aside class="site__aside site-aside">
+      <div class="site-aside__wrapper">
+        <div class="site-aside__inner">
+          @include('html/common/aside-menu.html', {current: 'support'})
+        </div>
+        <button class="btn-reset site-aside__toggler"
+                type="button"
+                title="Скрыть меню"
+                aria-label="Скрыть меню"></button>
+      </div>
+    </aside>
+    <main class="site__content">
+      @include('html/client/client-template-component.html', {title: 'Обращение в ТП', template: 'support/support.html' })
+    </main>
+  </div>
+  @include('html/common/scripts.html')
+</body>
+
+</html>

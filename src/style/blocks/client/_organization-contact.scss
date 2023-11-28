@@ -1,0 +1,54 @@
+.organization-contact {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+
+  &__header {
+    padding: 8px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--main-bg-light);
+    background-color: var(--main-text);
+  }
+
+  &__title {
+    color: inherit;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  &__delete-btn {
+    transition: color 0.15s ease-in-out;
+
+    &:hover {
+      color: var(--warning);
+    }
+  }
+
+  &__meta {
+    padding: 16px;
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  &__list {
+    display: grid;
+    row-gap: 12px;
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+
+  &__item {
+    line-height: 1.5;
+  }
+}

@@ -1,0 +1,339 @@
+.client-edit {
+  --input-bg: var(--main-bg);
+  --scrollbar-thumb: var(--blue40);
+
+  color: var(--main-text);
+  background-color: var(--main-bg-light);
+  height: 100%;
+
+  &--tabs {
+    display: flex;
+  }
+
+  &__nav {
+    background-color: var(--blue5);
+    padding: 30px 16px;
+    flex-shrink: 0;
+    min-width: 190px;
+  }
+
+  &__tabs-content {
+    flex-grow: 1;
+  }
+
+  &__panel {
+    height: 100%;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  &__tabs-nav {
+    &>li {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__tab-btn {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 9em;
+    color: var(--main-text);
+    background-color: transparent;
+
+    &[aria-selected="true"] {
+      color: var(--main-bg-light);
+      background-color: var(--accent);
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    max-width: 705px;
+    padding: 30px;
+  }
+
+  &__form-fields {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+    overflow-y: auto;
+    padding: 2px;
+    margin-bottom: 30px;
+
+    @include custom-scroll;
+  }
+
+  &__field-item {
+    grid-column: span 12;
+
+    &--col-3 {
+      grid-column: span 3;
+    }
+
+    &--col-4 {
+      grid-column: span 4;
+    }
+
+    &--col-5 {
+      grid-column: span 5;
+    }
+
+    &--col-6 {
+      grid-column: span 6;
+    }
+
+    &--col-7 {
+      grid-column: span 7;
+    }
+
+    &--col-8 {
+      grid-column: span 8;
+    }
+
+    &--col-9 {
+      grid-column: span 9;
+    }
+  }
+
+  &__notice {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 14px;
+
+    &.is-error {
+      color: var(--error);
+    }
+  }
+
+  &__add-key {
+    width: 100%;
+  }
+
+  &__phones-list {
+    display: grid;
+    row-gap: 10px;
+  }
+
+  &__add-phone {
+    font-size: 14px;
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    margin-top: 8px;
+    transition: opacity .2s ease-in-out;
+
+    & svg {
+      margin-right: 10px;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__base-list {
+    display: grid;
+    row-gap: 24px;
+    overflow-y: auto;
+    margin-bottom: 30px;
+
+    @include custom-scroll;
+  }
+
+  &__base-item {
+    --input-bg: var(--main-bg-light);
+
+    position: relative;
+    background-color: var(--main-bg);
+    border-radius: 4px;
+    padding: 20px;
+
+    & .client-edit__form-fields {
+      padding: 0;
+      margin: 0;
+      overflow-y: visible;
+    }
+  }
+
+  &__base-title {
+    font-weight: 600;
+  }
+
+  &__base-delete {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 16px;
+    height: 16px;
+    opacity: 0.6;
+    color: var(--main-text);
+    transition: color 0.25s ease-in-out;
+
+    &:hover {
+      color: var(--orange);
+    }
+  }
+
+  &__base-add {
+    margin-bottom: 30px;
+  }
+
+  &__key {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--activity-color);
+  }
+
+  &__key-history {
+    filter: grayscale(1);
+
+    &>li {
+      padding: 12px 0;
+
+      &:not(:last-of-type) {
+        border-bottom: 1px solid var(--border);
+      }
+    }
+  }
+
+  &__date-change-key {
+    opacity: 0.6;
+    margin-top: 6px;
+  }
+
+  &__subscribe {
+    padding: 12px 0;
+
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid var(--border);
+    }
+  }
+
+  &__table-subscribe {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 4px;
+    overflow: hidden;
+
+    & th {
+      font-weight: 14;
+      font-weight: 500;
+      padding: 14px;
+      color: var(--main-text);
+      background-color: var(--main-bg);
+      text-align: left;
+    }
+
+    & tr {
+      &:not(:last-of-type) {
+        & td {
+          border-bottom: 1px solid var(--border);
+        }
+      }
+    }
+
+    & td {
+      padding: 14px;
+    }
+  }
+
+  &__contact-list {
+    display: grid;
+    row-gap: 24px;
+    overflow-y: auto;
+    margin-bottom: 30px;
+
+    @include custom-scroll;
+  }
+
+  &__contact {
+    &[open] {
+      .client-edit__contact-title {
+        margin-bottom: 20px;
+
+        &::after {
+          transform: translateX(8px) rotateZ(180deg);
+        }
+      }
+    }
+  }
+
+  &__contact-item {
+    --input-bg: var(--main-bg-light);
+
+    position: relative;
+    background-color: var(--main-bg);
+    border-radius: 4px;
+    padding: 20px;
+
+    & .client-edit__form-fields {
+      padding: 0;
+      margin: 0;
+      overflow-y: visible;
+      box-sizing: border-box;
+    }
+  }
+
+  &__contact-title {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    list-style: none;
+    cursor: pointer;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: '';
+      width: 12px;
+      height: 6px;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='6' viewBox='0 0 12 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.6666 -0.000976563L1.33343 -0.000976563C1.15276 -0.000976563 0.996573 0.0576598 0.864609 0.174835C0.732645 0.29214 0.666718 0.430979 0.666718 0.591483C0.666718 0.751987 0.732645 0.890924 0.864609 1.00816L5.53123 5.15632C5.66334 5.27362 5.81953 5.33236 6.00005 5.33236C6.18058 5.33236 6.33691 5.27362 6.46877 5.15632L11.1354 1.00813C11.2672 0.890923 11.3334 0.751986 11.3334 0.59145C11.3334 0.430979 11.2672 0.29214 11.1354 0.174802C11.0035 0.0575299 10.8472 -0.000976563 10.6666 -0.000976563Z' fill='%230D7ED6'/%3E%3C/svg%3E");
+      transform: translateX(8px);
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+
+  &__contact-delete {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 16px;
+    height: 16px;
+    opacity: 0.6;
+    color: var(--main-text);
+    transition: color 0.25s ease-in-out;
+
+    &:hover {
+      color: var(--orange);
+    }
+  }
+
+  &__contact-add {
+    margin-bottom: 30px;
+  }
+
+  &__bottom {
+    margin-top: auto;
+
+    &>button {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+<header class="site__header site-header">
+  <div class="container-fluid">
+    <div class="site-header__inner">
+      <div class="site-header__logo">
+        <picture>
+          <img src="img/sprite.svg#logo"
+               width="173"
+               height="32"
+               alt="Первый сметный">
+        </picture>
+      </div>
+      <nav>
+        <ul class="list-reset site-header__nav-list">
+          <li class="header-nav-item@if(context.current === 'registry'){ header-nav-item--current}">
+            <a href="page-registry.html">
+              <svg width="20"
+                   height="20"
+                   aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-registry"></use>
+              </svg>
+              <span>Реестр</span>
+            </a>
+          </li>
+          <li class="header-nav-item@if(context.current === 'client'){ header-nav-item--current}">
+            <a href="page-new-client.html">
+              <svg width="20"
+                   height="20"
+                   aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-new-client"></use>
+              </svg>
+              <span>Новый клиент</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="site-user"
+           data-context-menu>
+        <button class="btn-reset site-user__trigger-menu"
+                type="button"
+                data-trigger>
+          <img class="site-user__avatar"
+               src="img/mock/user.jpg"
+               width="32"
+               height="32"
+               alt="Фото менеджера">
+          <span class="site-user__name">Александр В.</span>
+        </button>
+        <ul class="list-reset site-user__menu"
+            data-list>
+          <li>
+            <a href="#">Перейти в профиль</a>
+          </li>
+          <li>
+            <a href="#">Выйти из профиля</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>

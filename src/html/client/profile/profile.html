@@ -1,0 +1,21 @@
+<div class="client-profile">
+  <div class="client-profile__main">
+    @include('card.html', {isValid: true})
+    <section>
+      <h2 class="indent-reset client-profile__subtitle">Сводная информация</h2>
+      <ul class="list-reset client-info">
+        @include('info-component.html', {isExpiresContract: true})
+        @include('info-component.html', {isExpiredContract: true})
+        @include('info-component.html', {isClosed: true})
+        @include('info-component.html', {isExpiresKey: true})
+        @include('info-component.html', {isExpiredKey: true, hasUpdate: true})
+        @include('info-component.html', {isDeactivated: true})
+      </ul>
+    </section>
+  </div>
+  <footer class="client-profile__footer">
+    @include('notifications.html')
+    @include('commentaries.html')
+  </footer>
+  @include('../../common/modal-component.html', {template: '../client/profile/side', id: 'edit-profile', isSide: true})
+</div>

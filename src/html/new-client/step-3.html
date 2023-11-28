@@ -1,0 +1,40 @@
+<form class="add-client__form">
+  <h2 class="indent-reset add-client__subtitle">Нормативные базы</h2>
+  <div class="add-client__form-inner add-client__form-inner--base">
+    <ul class="list-reset add-client__form-item add-client__base-list">
+      @include('base-card.html')
+      @include('base-card.html')
+      @include('base-card.html')
+    </ul>
+    <button class="btn-reset btn btn--second add-client__form-item"
+            type="button">
+      <svg width="16"
+           height="16"
+           aria-hidden="true">
+        <use xlink:href="img/sprite.svg#icon-add"></use>
+      </svg>
+      <span>Добавить базу</span>
+    </button>
+
+    <div class="add-client__form-item add-client__form-bottom">
+      <button class="btn-reset btn btn--icon-reverse"
+              type="button">
+        <span>Перейти к договору</span>
+        <svg width="16"
+             height="16"
+             aria-hidden="true">
+          <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
+      <button class="btn-reset btn btn--second"
+              type="button">
+        <svg width="16"
+             height="16"
+             aria-hidden="true">
+          <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+        </svg>
+        <span>Назад</span>
+      </button>
+    </div>
+  </div>
+</form>

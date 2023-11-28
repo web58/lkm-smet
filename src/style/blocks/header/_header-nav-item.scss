@@ -1,0 +1,40 @@
+.header-nav-item {
+  --bg-color: var(--white);
+  --hover: var(--blue5);
+
+  &--current {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--accent);
+    }
+  }
+
+  & a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--main-text);
+    background-color: var(--bg-color);
+    padding: 10px 8px;
+    font-size: 14px;
+    min-width: 120px;
+    transition: background-color .2s ease-in-out;
+
+    &:hover {
+      background-color: var(--hover);
+    }
+  }
+
+  & svg {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 4px;
+  }
+}

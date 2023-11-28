@@ -1,0 +1,200 @@
+<div class="client-edit client-edit--tabs"
+     data-tabs="edit-programm">
+  <div class="client-edit__nav">
+    <h2 class="indent-reset client-edit__subtitle">Редактировать</h2>
+    <ul class="list-reset client-edit__tabs-nav"
+        data-tabs="nav">
+      <li>
+        <button class="btn-reset client-edit__tab-btn"
+                type="button"
+                data-tabs="btn">Программа</button>
+      </li>
+      <li>
+        <button class="btn-reset client-edit__tab-btn"
+                type="button"
+                data-tabs="btn">Нормативные базы</button>
+      </li>
+      <li>
+        <button class="btn-reset client-edit__tab-btn"
+                type="button"
+                data-tabs="btn">Ключи</button>
+      </li>
+    </ul>
+  </div>
+  <form class="client-edit__tabs-content">
+    <div class="client-edit__panel"
+         data-tabs="panel">
+      <div class="client-edit__form">
+        <h2 class="indent-reset client-edit__subtitle">Программа</h2>
+        <div class="client-edit__form-fields">
+          <div class="client-edit__field-item">
+            <div class="form-label">Название программы</div>
+            <div>Гранд-Смета</div>
+          </div>
+          <div class="client-edit__field-item">
+            <div class="form-label">Версия</div>
+            <div>версия такая-то</div>
+          </div>
+          <div class="client-edit__field-item client-edit__field-item--col-7">
+            <div class="form-label">Ключ</div>
+            <div>FSTS-28180</div>
+          </div>
+          <div class="client-edit__field-item client-edit__field-item--col-5">
+            <button class="btn-reset btn btn--second client-edit__add-key"
+                    type="button">Заменить ключ</button>
+          </div>
+          <label class="client-edit__field-item">
+            <span class="form-label">Новый ключ</span>
+            <input class="form-field"
+                   type="text"
+                   name="Ключ"
+                   placeholder="Ключ">
+          </label>
+          <label class="client-edit__field-item client-edit__field-item--col-6">
+            <span class="form-label">Дата покупки</span>
+            <input class="form-field"
+                   type="text"
+                   name="Дата покупки"
+                   placeholder="Введите дату">
+          </label>
+          <label class="client-edit__field-item client-edit__field-item--col-6">
+            <span class="form-label">Действует до</span>
+            <input class="form-field"
+                   type="text"
+                   name="Действует до"
+                   placeholder="Введите дату">
+          </label>
+        </div>
+        <div class="client-edit__bottom">
+          <button class="btn-reset btn"
+                  type="submit">Сохранить</button>
+        </div>
+      </div>
+    </div>
+    <div class="client-edit__panel"
+         data-tabs="panel">
+      <div class="client-edit__form">
+        <h2 class="indent-reset client-edit__subtitle">Нормативные базы</h2>
+        <ul class="list-reset client-edit__base-list">
+          <li class="client-edit__base-item">
+            <button class="btn-reset client-edit__base-delete"
+                    type="button"
+                    title="Удалить базу"
+                    aria-label="Удалить базу">
+              <svg width="14"
+                   height="14"
+                   aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-trash"></use>
+              </svg>
+            </button>
+            <div class="client-edit__form-fields">
+              <div class="client-edit__field-item client-edit__base-title">ТЕР Пензенской области ред.2014 г. доп. 0</div>
+              <label class="client-edit__field-item client-edit__field-item--col-6">
+                <span class="form-label">Начало подписки</span>
+                <input class="form-field"
+                       type="text"
+                       name="Начало подписки"
+                       placeholder="Введите дату"
+                       value="01.01.1970">
+              </label>
+              <label class="client-edit__field-item client-edit__field-item--col-6">
+                <span class="form-label">Окончание подписки</span>
+                <input class="form-field"
+                       type="text"
+                       name="Окончание подписки"
+                       placeholder="Введите дату"
+                       value="29.06.2023">
+              </label>
+            </div>
+          </li>
+          <li class="client-edit__base-item">
+            <button class="btn-reset client-edit__base-delete"
+                    type="button"
+                    title="Удалить базу"
+                    aria-label="Удалить базу">
+              <svg width="14"
+                   height="14"
+                   aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-trash"></use>
+              </svg>
+            </button>
+            <div class="client-edit__form-fields">
+              <label class="client-edit__field-item">
+                <span class="form-label">Наименование</span>
+                <select class="form-field form-field--select"
+                        name="Наименование">
+                  <option value="ТЕР Пензенской области"
+                          selected>ТЕР Пензенской области</option>
+                  <option value="Значение">Значение</option>
+                  <option value="Значение">Значение</option>
+                  <option value="Значение">Значение</option>
+                  <option value="Значение">Значение</option>
+                </select>
+                <span class="client-edit__notice">версия такая-то</span>
+              </label>
+              <label class="client-edit__field-item client-edit__field-item--col-6">
+                <span class="form-label">Начало подписки</span>
+                <input class="form-field"
+                       type="text"
+                       name="Начало подписки"
+                       placeholder="Введите дату">
+              </label>
+              <label class="client-edit__field-item client-edit__field-item--col-6">
+                <span class="form-label">Окончание подписки</span>
+                <input class="form-field"
+                       type="text"
+                       name="Окончание подписки"
+                       placeholder="Введите дату">
+              </label>
+            </div>
+          </li>
+        </ul>
+        <button class="btn-reset btn btn--second client-edit__base-add"
+                type="button">
+          <svg width="16"
+               height="16"
+               aria-hidden="true">
+            <use xlink:href="img/sprite.svg#icon-add"></use>
+          </svg>
+          <span>Добавить еще</span>
+        </button>
+        <div class="client-edit__bottom">
+          <button class="btn-reset btn"
+                  type="submit">Сохранить</button>
+        </div>
+      </div>
+    </div>
+    <div class="client-edit__panel"
+         data-tabs="panel">
+      <div class="client-edit__form">
+        <h2 class="indent-reset client-edit__subtitle">Ключи</h2>
+        <div class="client-edit__form-fields">
+          <div class="client-edit__field-item">
+            <div class="form-label">Действующий ключ</div>
+            <div class="client-edit__key">FSTS-28180</div>
+            <!-- класс is-expires если ключу осталось меньше месяца
+            класс is-expired если ключ просрочен
+            применяется к элементу с классом client-edit__key -->
+          </div>
+          <div class="client-edit__field-item">
+            <div class="form-label">Предыдущие ключи</div>
+            <ul class="list-reset client-edit__key-history">
+              <li>
+                <div>FSTS-28180</div>
+                <div class="client-edit__date-change-key">Замена 17.04.2021</div>
+              </li>
+              <li>
+                <div>FSTS-28180</div>
+                <div class="client-edit__date-change-key">Замена 17.04.2021</div>
+              </li>
+              <li>
+                <div>FSTS-28180</div>
+                <div class="client-edit__date-change-key">Замена 17.04.2021</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

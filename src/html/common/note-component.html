@@ -1,0 +1,16 @@
+<form class="notification notification--@type">
+  <div class="notification__body">
+    <div class="notification__meta">
+      <span class="notification__date">20.07.2022</span>
+      <span class="notification__type">@typeLabel</span>
+    </div>
+    <div class="notification__text">У клиента Иванов И.И. истекает срок договора ЛО №123456 от 17.01.2022. Договор закончится через 21 день.</div>
+  </div>
+  <label class="notification__control">
+    <input type="checkbox"
+           name="Название уведомления"
+           value="@if(context.isChecked){Прочитано. Вернуть в работу}@if(!context.isChecked){Отметить как прочитанное}"
+           @if(context.isChecked){checked}>
+    <span aria-hidden="true"></span>
+  </label>
+</form>

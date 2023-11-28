@@ -1,0 +1,14 @@
+@include('notes.html')
+<ul class="list-reset client__list">
+  @include('contract-component.html')
+  @include('contract-component.html', {isExpiresKey: true, hasUpdate: true})
+  @include('contract-component.html', {isExpiredKey: true,hideSubscribes: true})
+  @include('contract-component.html', {isDeactivated: true,hideSubscribes: true})
+  @include('contract-component.html', {isExpiresContract: true,hideSubscribes: true})
+  @include('contract-component.html', {isExpiredContract: true,hideSubscribes: true})
+  @include('contract-component.html', {isClosed: true})
+</ul>
+@include('../../common/modal-component.html', {template: '../client/contracts/side-create', id: 'add-contract', isSide: true})
+@include('../../common/modal-component.html', {template: '../client/contracts/side-edit', id: 'edit-contract', isSide: true})
+@include('../../common/modal-component.html', {template: '../client/contracts/side-notes', id: 'edit-notes', isSide: true})
+@include('../../common/modal-component.html', {template: '../client/contracts/close', id: 'close-contract'})

@@ -1,0 +1,153 @@
+.add-client {
+  padding-top: 25px;
+
+  &__inner {
+    position: relative;
+  }
+
+  &__controls {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 240px;
+
+    &>button {
+      margin-bottom: 12px;
+      width: 100%;
+    }
+  }
+
+  &__steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 -20px;
+    counter-reset: add-client-steps;
+  }
+
+  &__step {
+    --color: var(--medium-gray);
+    --color-dg: var(--medium-gray);
+    --bg-dg: var(--light-gray);
+
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin: 0 20px;
+    color: var(--color);
+    counter-increment: add-client-steps;
+
+    &::before {
+      content: counter(add-client-steps);
+      font-size: 18px;
+      font-weight: 600;
+      width: 32px;
+      height: 32px;
+      margin-right: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      color: var(--color-dg);
+      background-color: var(--bg-dg);
+    }
+
+    &--current {
+      --color: var(--dark-blue);
+      --color-dg: var(--blue);
+      --bg-dg: var(--blue5);
+    }
+  }
+
+  &__form {
+    padding-top: 40px;
+    padding-bottom: 80px;
+    width: 100%;
+    max-width: 425px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+
+  &__form-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 24px;
+    column-gap: 10px;
+
+    &--base {
+      row-gap: 14px;
+    }
+  }
+
+  &__base-list {
+    display: grid;
+    row-gap: 14px;
+  }
+
+  &__form-item {
+    grid-column: span 2;
+
+    &--half {
+      grid-column: span 1;
+    }
+  }
+
+  &__notice {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 14px;
+  }
+
+  &__phones-list {
+    display: grid;
+    row-gap: 10px;
+  }
+
+  &__add-phone {
+    font-size: 14px;
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    margin-top: 8px;
+    transition: opacity .2s ease-in-out;
+
+    & svg {
+      margin-right: 10px;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__checkboxes {
+    padding: 20px;
+    color: var(--main-text);
+    background-color: var(--main-bg-light);
+    border-radius: 4px;
+  }
+
+  &__checkboxes-title {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  &__checkboxes-list {
+    &>li {
+      padding: 12px 0;
+
+    }
+  }
+
+  &__form-bottom {
+    display: grid;
+    row-gap: 14px;
+    margin-top: 12px;
+  }
+}

@@ -1,0 +1,386 @@
+<div class="client-edit client-edit--tabs"
+     data-tabs="edit-organization-tabs">
+  <div class="client-edit__nav">
+    <h2 class="indent-reset client-edit__subtitle">Редактировать</h2>
+    <ul class="list-reset client-edit__tabs-nav"
+        data-tabs="nav">
+      <li>
+        <button class="btn-reset client-edit__tab-btn"
+                type="button"
+                data-tabs="btn">Организация</button>
+      </li>
+      <li>
+        <button class="btn-reset client-edit__tab-btn"
+                type="button"
+                data-tabs="btn">Контактные лица</button>
+      </li>
+    </ul>
+  </div>
+  <form class="client-edit__tabs-content">
+    <div class="client-edit__panel"
+         data-tabs="panel">
+      <div class="client-edit__form">
+        <h2 class="indent-reset client-edit__subtitle">Организация</h2>
+        <div class="client-edit__form-fields">
+          <label class="client-edit__field-item">
+            <span class="form-label">Наименование</span>
+            <input class="form-field"
+                   type="text"
+                   name="Организация"
+                   placeholder="Организация"
+                   value="ООО Организация">
+          </label>
+          <div class="client-edit__field-item">
+            <div class="form-label">Телефон</div>
+            <ul class="list-reset client-edit__phones-list">
+              <li class="form-add-item">
+                <label>
+                  <input class="form-field"
+                         type="text"
+                         name="Телефон"
+                         placeholder="+7 (900) 000-00-00"
+                         value="+7 (900) 000-00-00">
+                </label>
+                <button class="btn-reset form-add-item__delete"
+                        type="button"
+                        aria-label="Удалить"
+                        title="Удалить"></button>
+              </li>
+            </ul>
+            <button class="btn-reset client-edit__add-phone"
+                    type="button">
+              <svg width="12"
+                   height="12"
+                   aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-add"></use>
+              </svg>
+              <span>Добавить еще</span>
+            </button>
+          </div>
+          <label class="client-edit__field-item">
+            <span class="form-label">Регион</span>
+            <select class="form-field form-field--select"
+                    name="Регион">
+              <option value="Пензенская область"
+                      selected>Пензенская область</option>
+              <option value="Значение">Значение</option>
+              <option value="Значение">Значение</option>
+              <option value="Значение">Значение</option>
+              <option value="Значение">Значение</option>
+            </select>
+          </label>
+          <label class="client-edit__field-item">
+            <span class="form-label">Фактический адрес</span>
+            <input class="form-field"
+                   type="text"
+                   name="Фактический адрес"
+                   placeholder="Фактический адрес"
+                   value="г. Кузнецк, ул. Ленина, 19, оф. 109">
+          </label>
+          <label class="client-edit__field-item">
+            <span class="form-label">Почтовый адрес</span>
+            <input class="form-field"
+                   type="text"
+                   name="Почтовый адрес"
+                   placeholder="Почтовый адрес"
+                   value="г. Кузнецк, ул. Ленина, 19, оф. 109">
+          </label>
+          <label class="client-edit__field-item">
+            <span class="form-label">ИНН</span>
+            <input class="form-field"
+                   type="text"
+                   name="ИНН"
+                   placeholder="ИНН"
+                   value="561246783012">
+          </label>
+        </div>
+        <div class="client-edit__bottom">
+          <button class="btn-reset btn"
+                  type="submit">Сохранить</button>
+        </div>
+      </div>
+    </div>
+    <div class="client-edit__panel"
+         data-tabs="panel">
+      <div class="client-edit__form">
+        <h2 class="indent-reset client-edit__subtitle">Контактные лица</h2>
+        <ul class="list-reset client-edit__contact-list">
+          <li class="client-edit__contact-item">
+            <button class="btn-reset client-edit__contact-delete"
+                    type="button"
+                    title="Удалить контакт"
+                    aria-label="Удалить контакт">
+              <svg width="14"
+                   height="14"
+                   aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-trash"></use>
+              </svg>
+            </button>
+            <details class="client-edit__contact">
+              <summary class="client-edit__field-item client-edit__contact-title">Калякина Любовь</summary>
+              <div class="client-edit__form-fields">
+                <label class="client-edit__field-item">
+                  <span class="form-label">ФИО</span>
+                  <input class="form-field"
+                         type="text"
+                         name="ФИО"
+                         placeholder="Введите имя"
+                         value="Калякина Любовь">
+                </label>
+                <div class="client-edit__field-item">
+                  <div class="form-label">Телефон</div>
+                  <ul class="list-reset client-edit__phones-list">
+                    <li class="form-add-item">
+                      <label>
+                        <input class="form-field"
+                               type="text"
+                               name="Телефон"
+                               placeholder="+7 (900) 000-00-00"
+                               value="+7 (900) 000-00-00">
+                      </label>
+                      <button class="btn-reset form-add-item__delete"
+                              type="button"
+                              aria-label="Удалить"
+                              title="Удалить"></button>
+                    </li>
+                  </ul>
+                  <button class="btn-reset client-edit__add-phone"
+                          type="button">
+                    <svg width="12"
+                         height="12"
+                         aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#icon-add"></use>
+                    </svg>
+                    <span>Добавить еще</span>
+                  </button>
+                </div>
+                <div class="client-edit__field-item">
+                  <div class="form-label">E-mail</div>
+                  <ul class="list-reset client-edit__phones-list">
+                    <li class="form-add-item">
+                      <label>
+                        <input class="form-field"
+                               type="text"
+                               name="E-mail"
+                               placeholder="mail@example.com"
+                               value="mail@example.com">
+                      </label>
+                      <button class="btn-reset form-add-item__delete"
+                              type="button"
+                              aria-label="Удалить"
+                              title="Удалить"></button>
+                    </li>
+                  </ul>
+                  <button class="btn-reset client-edit__add-phone"
+                          type="button">
+                    <svg width="12"
+                         height="12"
+                         aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#icon-add"></use>
+                    </svg>
+                    <span>Добавить еще</span>
+                  </button>
+                </div>
+                <label class="client-edit__field-item">
+                  <span class="form-label">Должность</span>
+                  <input class="form-field"
+                         type="text"
+                         name="Должность"
+                         placeholder="Введите должность"
+                         value="Бухгалтер">
+                </label>
+              </div>
+            </details>
+          </li>
+          <li class="client-edit__contact-item">
+            <button class="btn-reset client-edit__contact-delete"
+                    type="button"
+                    title="Удалить контакт"
+                    aria-label="Удалить контакт">
+              <svg width="14"
+                   height="14"
+                   aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-trash"></use>
+              </svg>
+            </button>
+            <details class="client-edit__contact">
+              <summary class="client-edit__field-item client-edit__contact-title">Калякина Любовь</summary>
+              <div class="client-edit__form-fields">
+                <label class="client-edit__field-item">
+                  <span class="form-label">ФИО</span>
+                  <input class="form-field"
+                         type="text"
+                         name="ФИО"
+                         placeholder="Введите имя"
+                         value="Калякина Любовь">
+                </label>
+                <div class="client-edit__field-item">
+                  <div class="form-label">Телефон</div>
+                  <ul class="list-reset client-edit__phones-list">
+                    <li class="form-add-item">
+                      <label>
+                        <input class="form-field"
+                               type="text"
+                               name="Телефон"
+                               placeholder="+7 (900) 000-00-00"
+                               value="+7 (900) 000-00-00">
+                      </label>
+                      <button class="btn-reset form-add-item__delete"
+                              type="button"
+                              aria-label="Удалить"
+                              title="Удалить"></button>
+                    </li>
+                  </ul>
+                  <button class="btn-reset client-edit__add-phone"
+                          type="button">
+                    <svg width="12"
+                         height="12"
+                         aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#icon-add"></use>
+                    </svg>
+                    <span>Добавить еще</span>
+                  </button>
+                </div>
+                <div class="client-edit__field-item">
+                  <div class="form-label">E-mail</div>
+                  <ul class="list-reset client-edit__phones-list">
+                    <li class="form-add-item">
+                      <label>
+                        <input class="form-field"
+                               type="text"
+                               name="E-mail"
+                               placeholder="mail@example.com"
+                               value="mail@example.com">
+                      </label>
+                      <button class="btn-reset form-add-item__delete"
+                              type="button"
+                              aria-label="Удалить"
+                              title="Удалить"></button>
+                    </li>
+                  </ul>
+                  <button class="btn-reset client-edit__add-phone"
+                          type="button">
+                    <svg width="12"
+                         height="12"
+                         aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#icon-add"></use>
+                    </svg>
+                    <span>Добавить еще</span>
+                  </button>
+                </div>
+                <label class="client-edit__field-item">
+                  <span class="form-label">Должность</span>
+                  <input class="form-field"
+                         type="text"
+                         name="Должность"
+                         placeholder="Введите должность"
+                         value="Бухгалтер">
+                </label>
+              </div>
+            </details>
+          </li>
+          <li class="client-edit__contact-item">
+            <button class="btn-reset client-edit__contact-delete"
+                    type="button"
+                    title="Удалить контакт"
+                    aria-label="Удалить контакт">
+              <svg width="14"
+                   height="14"
+                   aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-trash"></use>
+              </svg>
+            </button>
+            <details class="client-edit__contact">
+              <summary class="client-edit__field-item client-edit__contact-title">Калякина Любовь</summary>
+              <div class="client-edit__form-fields">
+                <label class="client-edit__field-item">
+                  <span class="form-label">ФИО</span>
+                  <input class="form-field"
+                         type="text"
+                         name="ФИО"
+                         placeholder="Введите имя"
+                         value="Калякина Любовь">
+                </label>
+                <div class="client-edit__field-item">
+                  <div class="form-label">Телефон</div>
+                  <ul class="list-reset client-edit__phones-list">
+                    <li class="form-add-item">
+                      <label>
+                        <input class="form-field"
+                               type="text"
+                               name="Телефон"
+                               placeholder="+7 (900) 000-00-00"
+                               value="+7 (900) 000-00-00">
+                      </label>
+                      <button class="btn-reset form-add-item__delete"
+                              type="button"
+                              aria-label="Удалить"
+                              title="Удалить"></button>
+                    </li>
+                  </ul>
+                  <button class="btn-reset client-edit__add-phone"
+                          type="button">
+                    <svg width="12"
+                         height="12"
+                         aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#icon-add"></use>
+                    </svg>
+                    <span>Добавить еще</span>
+                  </button>
+                </div>
+                <div class="client-edit__field-item">
+                  <div class="form-label">E-mail</div>
+                  <ul class="list-reset client-edit__phones-list">
+                    <li class="form-add-item">
+                      <label>
+                        <input class="form-field"
+                               type="text"
+                               name="E-mail"
+                               placeholder="mail@example.com"
+                               value="mail@example.com">
+                      </label>
+                      <button class="btn-reset form-add-item__delete"
+                              type="button"
+                              aria-label="Удалить"
+                              title="Удалить"></button>
+                    </li>
+                  </ul>
+                  <button class="btn-reset client-edit__add-phone"
+                          type="button">
+                    <svg width="12"
+                         height="12"
+                         aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#icon-add"></use>
+                    </svg>
+                    <span>Добавить еще</span>
+                  </button>
+                </div>
+                <label class="client-edit__field-item">
+                  <span class="form-label">Должность</span>
+                  <input class="form-field"
+                         type="text"
+                         name="Должность"
+                         placeholder="Введите должность"
+                         value="Бухгалтер">
+                </label>
+              </div>
+            </details>
+          </li>
+        </ul>
+        <button class="btn-reset btn btn--second client-edit__contact-add"
+                type="button">
+          <svg width="16"
+               height="16"
+               aria-hidden="true">
+            <use xlink:href="img/sprite.svg#icon-add"></use>
+          </svg>
+          <span>Добавить еще</span>
+        </button>
+        <div class="client-edit__bottom">
+          <button class="btn-reset btn"
+                  type="submit">Сохранить</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

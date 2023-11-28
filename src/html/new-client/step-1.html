@@ -1,0 +1,120 @@
+<form class="add-client__form">
+  <h2 class="indent-reset add-client__subtitle">Добавить клиента</h2>
+  <div class="add-client__form-inner">
+    <label class="add-client__form-item">
+      <span class="form-label">Фамилия</span>
+      <input class="form-field"
+             type="text"
+             name="Фамилия"
+             placeholder="Иванов">
+    </label>
+    <label class="add-client__form-item add-client__form-item--half">
+      <span class="form-label">Имя</span>
+      <input class="form-field"
+             type="text"
+             name="Имя"
+             placeholder="Иван">
+    </label>
+    <label class="add-client__form-item add-client__form-item--half">
+      <span class="form-label">Отчество</span>
+      <input class="form-field"
+             type="text"
+             name="Отчество"
+             placeholder="Иванович">
+    </label>
+    <label class="add-client__form-item">
+      <span class="form-label">E-mail</span>
+      <input class="form-field"
+             type="text"
+             name="E-mail"
+             placeholder="example@site.ru">
+    </label>
+    <div class="add-client__form-item">
+      <div class="form-label">Телефон</div>
+      <ul class="list-reset add-client__phones-list">
+        <li class="form-add-item">
+          <label>
+            <input class="form-field"
+                   type="text"
+                   name="Телефон"
+                   placeholder="+7 (900) 000-00-00">
+          </label>
+          <button class="btn-reset form-add-item__delete"
+                  type="button"
+                  aria-label="Удалить"
+                  title="Удалить"></button>
+        </li>
+      </ul>
+      <button class="btn-reset add-client__add-phone"
+              type="button">
+        <svg width="12"
+             height="12"
+             aria-hidden="true">
+          <use xlink:href="img/sprite.svg#icon-add"></use>
+        </svg>
+        <span>Добавить еще</span>
+      </button>
+    </div>
+    <label class="add-client__form-item">
+      <span class="form-label">Организация</span>
+      <input class="form-field"
+             type="text"
+             name="Организация"
+             placeholder="ООО “Компания”">
+    </label>
+    <label class="add-client__form-item">
+      <span class="form-label">Регион</span>
+      <select class="form-field form-field--select"
+              name="Регион">
+        <option value="Пензенская область">Пензенская область</option>
+        <option value="Значение">Значение</option>
+        <option value="Значение">Значение</option>
+        <option value="Значение">Значение</option>
+        <option value="Значение">Значение</option>
+      </select>
+    </label>
+    <label class="add-client__form-item">
+      <span class="form-label">Маршрут</span>
+      <input class="form-field"
+             type="text"
+             name="Маршрут"
+             placeholder="Маршрут">
+    </label>
+    <label class="add-client__form-item">
+      <span class="form-label">ИНН</span>
+      <input class="form-field"
+             type="text"
+             name="ИНН"
+             placeholder="ИНН">
+    </label>
+    <label class="add-client__form-item">
+      <span class="form-label">Менеджер</span>
+      <select class="form-field form-field--select"
+              name="Менеджер">
+        <option value="Александр Васильев">Александр Васильев</option>
+        <option value="Значение">Значение</option>
+        <option value="Значение">Значение</option>
+        <option value="Значение">Значение</option>
+        <option value="Значение">Значение</option>
+      </select>
+    </label>
+    <label class="add-client__form-item custom-checkbox custom-checkbox--toggle">
+      <input type="checkbox"
+             name="Валидация">
+      <span>Валидация</span>
+    </label>
+    <div class="add-client__form-item add-client__form-bottom">
+      <button class="btn-reset btn btn--icon-reverse"
+              type="button">
+        <span>Далее</span>
+        <svg width="16"
+             height="16"
+             aria-hidden="true">
+          <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
+      <button class="btn-reset btn btn--second"
+              type="submit">Сохранить и выйти</button>
+    </div>
+  </div>
+</form>

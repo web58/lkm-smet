@@ -1,0 +1,48 @@
+.base-card {
+  --input-color: var(--dark-blue);
+  --input-bg: var(--white5);
+
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 24px;
+  column-gap: 10px;
+  padding: 20px;
+  color: var(--main-text);
+  background-color: var(--main-bg-light);
+  border-radius: 4px;
+  border-top-right-radius: 0;
+
+  &__item {
+    grid-column: span 2;
+
+    &--half {
+      grid-column: span 1;
+    }
+  }
+
+  &__edition {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 14px;
+  }
+
+  &__delete {
+    position: absolute;
+    right: -40px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #374957;
+    background-color: #E8EFF2;
+    border-radius: 0 4px 4px 0;
+    transition: color .2s ease-in-out, background-color .2s ease-in-out;
+
+    &:hover {
+      color: #FFFFFF;
+      background-color: #374957;
+    }
+  }
+}

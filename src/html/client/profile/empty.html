@@ -1,0 +1,16 @@
+<div class="client-profile">
+  <div class="client-profile__main">
+    @include('card.html')
+    <section class="client-profile-keys">
+      <h2 class="indent-reset client-profile-keys__title">Ключи</h2>
+      <div class="client-profile-keys__list">
+        <span>У клиента еще нет ни одной программы</span>
+      </div>
+    </section>
+  </div>
+  <footer class="client-profile__footer">
+    @include('notifications.html', {noNotes: true, noRecomends: true})
+    @include('commentaries.html', {noComments: true})
+  </footer>
+  @include('../../common/modal-component.html', {template: '../client/profile/side', id: 'edit-profile', isSide: true})
+</div>

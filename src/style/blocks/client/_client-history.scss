@@ -1,0 +1,73 @@
+.client-history {
+  --table-light: var(--white);
+  --table-dark: var(--dark-blue);
+
+  max-width: 915px;
+
+  &__nav {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__nav-btn {
+    font-weight: 600;
+    padding: 16px;
+    border-radius: 4px 4px 0 0;
+    color: var(--table-dark);
+    background-color: transparent;
+    opacity: 0.8;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, opacity 0.15s ease-in-out;
+
+    &[aria-selected="true"] {
+      color: var(--table-light);
+      background-color: var(--table-dark);
+      opacity: 1;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 0 4px 4px;
+    overflow: hidden;
+
+    & thead {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--table-light);
+      background-color: var(--table-dark);
+    }
+
+    & tbody {
+      color: var(--table-dark);
+      background-color: var(--table-light);
+
+      tr:not(:last-of-type) {
+        border-bottom: 1px solid var(--border);
+      }
+    }
+
+    & th,
+    & td {
+      text-align: left;
+      padding: 14px 12px;
+      vertical-align: top;
+
+      &.is-hidden-cell {
+        height: 500px;
+      }
+
+      &:first-child {
+        width: 130px;
+      }
+
+      &:nth-child(2) {
+        width: 130px;
+      }
+
+      & a {
+        text-decoration-color: inherit;
+      }
+    }
+  }
+}

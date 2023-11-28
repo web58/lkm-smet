@@ -1,0 +1,39 @@
+<div class="client__notes contract-notes">
+  <div class="contract-notes__item contract-notes__item--col-3">
+    <div class="contract-notes__label">
+      <button class="btn-reset contract-notes__modal-trigger"
+              type="button"
+              data-modal="#edit-notes">
+        <span>Документооборот</span>
+        <svg width="14"
+             height="14"
+             aria-hidden="true">
+          <use xlink:href="img/sprite.svg#icon-edit"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="contract-notes__value">
+      @if(context.noNotes){&ndash;}
+      @if(!context.noNotes){ЭДО}
+
+    </div>
+  </div>
+  <div class="contract-notes__item contract-notes__item--col-5">
+    <div class="contract-notes__label">
+      <button class="btn-reset contract-notes__modal-trigger"
+              type="button"
+              data-modal="#edit-notes">
+        <span>Примечания</span>
+        <svg width="14"
+             height="14"
+             aria-hidden="true">
+          <use xlink:href="img/sprite.svg#icon-edit"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="contract-notes__value">
+      @if(context.noNotes){&ndash;}
+      @if(!context.noNotes){закрывать акты не позднее 15 числа}
+    </div>
+  </div>
+</div>

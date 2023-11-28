@@ -1,0 +1,10 @@
+<ul class="list-reset client__list">
+  @include('programm-component.html', { isExpires: false, isExpired: false, isDeactivated: false, hasUpdate: false, hasSupport: true, hideCanceledBase: true, })
+  @include('programm-component.html', { isExpires: true, isExpired: false, isDeactivated: false, hasUpdate: false, hasSupport: true, hideCanceledBase: false, })
+  @include('programm-component.html', { isExpires: false, isExpired: true, isDeactivated: false, hasUpdate: true, hasSupport: false, hideCanceledBase: false, })
+  @include('programm-component.html', { isExpires: false, isExpired: false, isDeactivated: true, hasUpdate: true, hasSupport: false })
+</ul>
+@include('../../common/modal-component.html', {template: '../client/programm/delete', id: 'delete-programm'})
+@include('../../common/modal-component.html', {template: '../client/programm/deactivate', id: 'deactivate-programm'})
+@include('../../common/modal-component.html', {template: '../client/programm/side-create', id: 'add-programm', isSide: true})
+@include('../../common/modal-component.html', {template: '../client/programm/side-edit', id: 'edit-programm', isSide: true})

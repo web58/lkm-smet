@@ -1,0 +1,85 @@
+.profile-programm {
+  padding: 20px;
+  padding-top: 72px;
+  display: flex;
+  flex-direction: column;
+
+  &.has-update {
+    & .profile-programm__label {
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.71211 12.5H13.1494C13.4707 12.5 13.7872 12.4226 14.0722 12.2745C14.3572 12.1263 14.6023 11.9116 14.7868 11.6486C14.9712 11.3857 15.0897 11.0822 15.132 10.7637C15.1744 10.4453 15.1394 10.1214 15.0301 9.81933L13.1288 4.56267C12.8041 3.39447 12.1056 2.36479 11.1403 1.63111C10.175 0.897433 8.99593 0.500141 7.78345 0.5V0.5C6.52126 0.49998 5.29681 0.930392 4.31225 1.72017C3.3277 2.50995 2.64191 3.61187 2.36811 4.844L0.801446 9.91067C0.709206 10.2098 0.68847 10.5264 0.740906 10.835C0.793341 11.1436 0.917485 11.4356 1.10335 11.6875C1.28921 11.9394 1.5316 12.1441 1.81102 12.2852C2.09044 12.4264 2.39908 12.4999 2.71211 12.5Z' fill='%239F2DF9'/%3E%3Cpath d='M4.73315 13.8333C4.88616 14.5868 5.29497 15.2642 5.89032 15.7508C6.48566 16.2375 7.23092 16.5033 7.99982 16.5033C8.76872 16.5033 9.51399 16.2375 10.1093 15.7508C10.7047 15.2642 11.1135 14.5868 11.2665 13.8333H4.73315Z' fill='%239F2DF9'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        transform: translate(8px, 3px);
+      }
+    }
+  }
+
+  &.is-deactivated {
+    filter: grayscale(1) opacity(0.7);
+  }
+
+  &__icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: block;
+    width: 32px;
+    height: 32px;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+  }
+
+  &__label {
+    font-weight: 600;
+  }
+
+  &__version {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 4px;
+  }
+
+  &__key {
+    flex-grow: 1;
+    margin-bottom: 12px;
+
+    & a {
+      display: inline-block;
+      color: var(--activity-color, inherit);
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+
+  &__date-label {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 6px;
+  }
+
+  &__date {
+    display: flex;
+    align-items: center;
+
+    & svg {
+      width: 16px;
+      height: 16px;
+      color: var(--activity-color);
+      margin-right: 8px;
+    }
+  }
+
+  @include media-min (1600px) {
+    padding: 20px;
+    padding-left: 72px;
+  }
+}

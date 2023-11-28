@@ -1,0 +1,22 @@
+.status-text-component {
+  --default-text: var(--green);
+  --warning-text: var(--yellow);
+  --error-text: var(--red);
+  --warning-bg: var(--yellow15);
+  --error-bg: var(--red30);
+
+  display: inline-block;
+  padding: 3px;
+  border-radius: 6px;
+  color: var(--default-text);
+
+  &--warning {
+    color: var(--warning-text);
+    background-color: var(--warning-bg);
+  }
+
+  &--error {
+    color: var(--error-text);
+    background-color: var(--error-bg);
+  }
+}

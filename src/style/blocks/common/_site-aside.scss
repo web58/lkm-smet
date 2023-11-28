@@ -1,0 +1,83 @@
+.site-aside {
+  --aside-color: var(--white);
+  --aside-bg: var(--dark-blue);
+
+  position: fixed;
+  z-index: 2;
+  display: block;
+  flex-shrink: 0;
+  width: calc(var(--aside-width) + var(--aside-toggler-width));
+  transition: width 0.2s ease-in-out;
+  will-change: width;
+
+  &+.site__content {
+    padding-left: var(--aside-toggler-width);
+  }
+
+  &.is-collapsed {
+    width: var(--aside-toggler-width);
+
+    & .site-aside__toggler {
+      &::before {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+
+  &__wrapper {
+    position: sticky;
+    top: var(--main-offset);
+    display: flex;
+  }
+
+  &__inner {
+    color: var(--aside-color);
+    background-color: var(--aside-bg);
+    width: 100%;
+    height: calc(100 * var(--vh, 1vh) - var(--main-offset));
+    max-height: calc(100 * var(--vh, 1vh) - var(--main-offset));
+    overflow-x: hidden;
+
+    &>* {
+      min-width: calc(var(--aside-width) - var(--aside-toggler-width));
+    }
+  }
+
+  &__toggler {
+    --toggler-bg: var(--light-gray);
+    --toggler-bg-hover: var(--medium-gray);
+
+    position: relative;
+    width: var(--aside-toggler-width);
+    background-color: var(--light-gray);
+    flex-shrink: 0;
+    outline: 0;
+    transition: background-color .2s ease-in-out;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='11' height='9' viewBox='0 0 11 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.45937 0.971475L4.5167 0.0288086L0.988038 3.55747C0.738077 3.80751 0.597656 4.14659 0.597656 4.50014C0.597656 4.85369 0.738077 5.19277 0.988038 5.44281L4.5167 8.97147L5.45937 8.02881L1.93337 4.50014L5.45937 0.971475Z' fill='%23787D82'/%3E%3Cpath d='M10.1261 0.971475L9.18346 0.0288086L5.18347 4.02881C5.05849 4.15383 4.98828 4.32337 4.98828 4.50014C4.98828 4.67692 5.05849 4.84646 5.18347 4.97147L9.18346 8.97147L10.1261 8.02881L6.60014 4.50014L10.1261 0.971475Z' fill='%23787D82'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 10px 10px;
+    }
+
+    &:hover {
+      background-color: var(--toggler-bg-hover);
+    }
+  }
+
+  @include media-min (1200px) {
+    position: static;
+
+    &+.site__content {
+      padding-left: 0;
+    }
+  }
+}

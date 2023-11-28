@@ -1,0 +1,26 @@
+.client-service {
+  display: grid;
+  row-gap: 12px;
+  justify-content: start;
+
+
+  &__item {
+    padding-right: 30px;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid var(--border);
+    }
+  }
+
+  &__label {
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  &__value {
+    white-space: nowrap;
+    margin-bottom: 12px;
+  }
+}

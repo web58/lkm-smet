@@ -1,0 +1,122 @@
+<div class="client-organization">
+  @include('card.html', {isValid: true, editor: 'tabs'})
+  <section class="client-organization__contacts">
+    <h2 class="indent-reset client-organization__subtitle">Контактные лица</h2>
+    <ul class="list-reset client-organization__list">
+      <li class="organization-contact">
+        <header class="organization-contact__header">
+          <div class="organization-contact__title">Бухгалтер</div>
+          <button class="btn-reset organization-contact__delete-btn"
+                  type="button"
+                  title="Удалить"
+                  aria-label="Удалить"
+                  data-modal="#delete-contact">
+            <svg width="14"
+                 height="14"
+                 aria-hidden="true">
+              <use xlink:href="img/sprite.svg#icon-trash"></use>
+            </svg>
+          </button>
+        </header>
+        <div class="organization-contact__meta">
+          <h3 class="indent-reset organization-contact__name">Калякина Любовь</h3>
+          <ul class="list-reset organization-contact__list">
+            <li class="organization-contact__item">
+              <div class="organization-contact__label">Телефон</div>
+              <ul class="list-reset">
+                <li>45-82-29</li>
+                <li>45-82-29</li>
+              </ul>
+            </li>
+            <li class="organization-contact__item">
+              <div class="organization-contact__label">Email</div>
+              <ul class="list-reset">
+                <li>mail@example.com</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="organization-contact">
+        <header class="organization-contact__header">
+          <div class="organization-contact__title">Бухгалтер</div>
+          <button class="btn-reset organization-contact__delete-btn"
+                  type="button"
+                  title="Удалить"
+                  aria-label="Удалить"
+                  data-modal="#delete-contact">
+            <svg width="14"
+                 height="14"
+                 aria-hidden="true">
+              <use xlink:href="img/sprite.svg#icon-trash"></use>
+            </svg>
+          </button>
+        </header>
+        <div class="organization-contact__meta">
+          <h3 class="indent-reset organization-contact__name">Калякина Любовь</h3>
+          <ul class="list-reset organization-contact__list">
+            <li class="organization-contact__item">
+              <div class="organization-contact__label">Телефон</div>
+              <ul class="list-reset">
+                <li>45-82-29</li>
+                <li>45-82-29</li>
+              </ul>
+            </li>
+            <li class="organization-contact__item">
+              <div class="organization-contact__label">Email</div>
+              <ul class="list-reset">
+                <li>mail@example.com</li>
+                <li>mail@example.com</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="organization-contact">
+        <header class="organization-contact__header">
+          <div class="organization-contact__title">Сотрудник</div>
+          <button class="btn-reset organization-contact__delete-btn"
+                  type="button"
+                  title="Удалить"
+                  aria-label="Удалить"
+                  data-modal="#delete-contact">
+            <svg width="14"
+                 height="14"
+                 aria-hidden="true">
+              <use xlink:href="img/sprite.svg#icon-trash"></use>
+            </svg>
+          </button>
+        </header>
+        <div class="organization-contact__meta">
+          <h3 class="indent-reset organization-contact__name">Калякина Любовь</h3>
+          <ul class="list-reset organization-contact__list">
+            <li class="organization-contact__item">
+              <div class="organization-contact__label">Телефон</div>
+              <ul class="list-reset">
+                <li>45-82-29</li>
+              </ul>
+            </li>
+            <li class="organization-contact__item">
+              <div class="organization-contact__label">Email</div>
+              <ul class="list-reset">
+                <li>mail@example.com</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+    <button class="btn-reset btn btn--second client-organization__add-contact-btn"
+            type="button"
+            data-modal="#edit-organization-tabs">
+      <svg width="16"
+           height="16"
+           aria-hidden="true">
+        <use xlink:href="img/sprite.svg#icon-edit"></use>
+      </svg>
+      <span>Изменить</span>
+    </button>
+  </section>
+</div>
+@include('../../common/modal-component.html', {template: '../client/organization/side-edit', id: 'edit-organization-tabs', isSide: true})
+@include('../../common/modal-component.html', {template: '../client/organization/delete', id: 'delete-contact'})

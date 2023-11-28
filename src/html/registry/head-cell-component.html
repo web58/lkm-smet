@@ -1,0 +1,41 @@
+<div class="head-cell">
+  <span class="head-cell__label">@label</span>
+  <button class="btn-reset head-cell__sort @if(context.sortModificator){@sortModificator}"
+          aria-label="Сортировка">
+    <svg width="12"
+         height="12"
+         aria-hidden="true">
+      <use class="head-cell__sort-icon head-cell__sort-icon--default"
+           xlink:href="img/sprite.svg#icon-sort-default"></use>
+      <use class="head-cell__sort-icon head-cell__sort-icon--up"
+           xlink:href="img/sprite.svg#icon-sort-up"></use>
+      <use class="head-cell__sort-icon head-cell__sort-icon--down"
+           xlink:href="img/sprite.svg#icon-sort-down"></use>
+    </svg>
+  </button>
+  <form class="head-cell__form"
+        method="get">
+    @if(context.search) {
+    <input class="form-field head-cell__field head-cell__field--search"
+           name="@label"
+           type="search"
+           placeholder="Поиск">
+    }
+    @if(context.select) {
+    <select class="form-field head-cell__field head-cell__field--select"
+            name="@label">
+      <option value="Все">Все</option>
+      <option value="Значение">Значение</option>
+      <option value="Значение">Значение</option>
+      <option value="Значение">Значение</option>
+      <option value="Значение">Значение</option>
+    </select>
+    }
+    @if(context.date) {
+    <input class="form-field head-cell__field head-cell__field--date"
+           name="@label"
+           type="search"
+           placeholder="Поиск">
+    }
+  </form>
+</div>

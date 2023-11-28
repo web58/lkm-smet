@@ -1,0 +1,56 @@
+.body-cell {
+  color: var(--main-text-dark);
+
+  &--client {
+    font-weight: 600;
+  }
+
+  &--email {
+    & a {
+      text-decoration-color: inherit;
+    }
+  }
+
+  &--contract {
+    font-weight: 600;
+  }
+
+  &--key {
+    font-weight: 600;
+  }
+
+  &--key-sb {
+    word-break: break-all;
+  }
+
+  &--secret-sb {
+    word-break: break-all;
+  }
+
+  &--path-sb {
+    word-break: break-all;
+  }
+
+  &__status {
+    --default-text: var(--green);
+    --warning-text: var(--yellow);
+    --error-text: var(--red);
+    --warning-bg: var(--yellow15);
+    --error-bg: var(--red30);
+
+    display: inline-block;
+    padding: 3px;
+    border-radius: 6px;
+    color: var(--default-text);
+
+    &--warning {
+      color: var(--warning-text);
+      background-color: var(--warning-bg);
+    }
+
+    &--error {
+      color: var(--error-text);
+      background-color: var(--error-bg);
+    }
+  }
+}

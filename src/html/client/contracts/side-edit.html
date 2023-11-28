@@ -1,0 +1,129 @@
+<div class="client-edit client-edit--tabs"
+     data-tabs="edit-contract">
+  <div class="client-edit__nav">
+    <h2 class="indent-reset client-edit__subtitle">Редактировать</h2>
+    <ul class="list-reset client-edit__tabs-nav"
+        data-tabs="nav">
+      <li>
+        <button class="btn-reset client-edit__tab-btn"
+                type="button"
+                data-tabs="btn">Договор</button>
+      </li>
+      <li>
+        <button class="btn-reset client-edit__tab-btn"
+                type="button"
+                data-tabs="btn">Подписки</button>
+      </li>
+    </ul>
+  </div>
+  <form class="client-edit__tabs-content">
+    <div class="client-edit__panel"
+         data-tabs="panel">
+      <div class="client-edit__form">
+        <h2 class="indent-reset client-edit__subtitle">Редактировать</h2>
+        <div class="client-edit__form-fields">
+          <label class="client-edit__field-item">
+            <span class="form-label">Ключ</span>
+            <select class="form-field form-field--select"
+                    name="Ключ">
+              <option value="FSTS-28180"
+                      selected>FSTS-28180</option>
+              <option value="Значение">Значение</option>
+              <option value="Значение">Значение</option>
+              <option value="Значение">Значение</option>
+              <option value="Значение">Значение</option>
+            </select>
+          </label>
+          <label class="client-edit__field-item">
+            <span class="form-label">Тип договора</span>
+            <input class="form-field"
+                   type="text"
+                   name="Тип договора"
+                   placeholder="Тип договора">
+          </label>
+          <label class="client-edit__field-item">
+            <span class="form-label">Номер договора</span>
+            <input class="form-field"
+                   type="text"
+                   name="Номер договора"
+                   placeholder="Номер договора">
+          </label>
+          <label class="client-edit__field-item">
+            <span class="form-label">Тариф</span>
+            <select class="form-field form-field--select"
+                    name="Тариф">
+              <option value="ЛО"
+                      selected>ЛО</option>
+              <option value="Значение">Значение</option>
+              <option value="Значение">Значение</option>
+              <option value="Значение">Значение</option>
+              <option value="Значение">Значение</option>
+            </select>
+          </label>
+          <label class="client-edit__field-item client-edit__field-item--col-6">
+            <span class="form-label">Дата начала</span>
+            <input class="form-field"
+                   type="text"
+                   name="Дата начала"
+                   placeholder="Введите дату">
+          </label>
+          <label class="client-edit__field-item client-edit__field-item--col-6">
+            <span class="form-label">Дата окончания</span>
+            <input class="form-field"
+                   type="text"
+                   name="Дата окончания"
+                   placeholder="Введите дату">
+          </label>
+        </div>
+        <div class="client-edit__bottom">
+          <button class="btn-reset btn"
+                  type="submit">Сохранить</button>
+        </div>
+      </div>
+    </div>
+    <div class="client-edit__panel"
+         data-tabs="panel">
+      <div class="client-edit__form">
+        <h2 class="indent-reset client-edit__subtitle">Подписки</h2>
+        <table class="client-edit__table-subscribe">
+          <thead>
+            <tr>
+              <th>Наименование</th>
+              <th>Рассылка</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span>@include('../../common/checkbox-component.html', {label: 'СН-2012', name: 'СН-2012', checked: true})</span>
+              </td>
+              <td>
+                <span>@include('../../common/subscribe-component.html', {name: 'СН-2012', checked: true})</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span>@include('../../common/checkbox-component.html', {label: 'СН-2012', name: 'СН-2012', checked: true})</span>
+              </td>
+              <td>
+                <span>@include('../../common/subscribe-component.html', {name: 'СН-2012', checked: true})</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span>@include('../../common/checkbox-component.html', {label: 'СН-2012', name: 'СН-2012', checked: false})</span>
+              </td>
+              <td>
+                <span>@include('../../common/subscribe-component.html', {name: 'СН-2012', checked: false, disabled: true})</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="client-edit__bottom">
+          <button class="btn-reset btn"
+                  type="submit">Сохранить</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

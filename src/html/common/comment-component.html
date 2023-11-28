@@ -1,0 +1,37 @@
+<div class="commentary@if(context.isPinned){ commentary--pinned}@if(context.isHide){ commentary--hide}">
+  <div class="commentary__body">
+    обслуживание перенесено с сентября на октябрь
+  </div>
+  <div class="commentary__meta">
+    <span class="commentary__date">20.07.2022</span>
+    <span class="commentary__author">Александр</span>
+  </div>
+  <div>
+    <button class="btn-reset commentary__controls-btn commentary__controls-btn--hint"
+            type="button"
+            title="@if(context.isHide){Показать}@if(!context.isHide){Скрыть}"
+            aria-label="@if(context.isHide){Показать}@if(!context.isHide){Скрыть}">
+      <svg width="10"
+           height="10"
+           aria-hidden="true">
+        <use class="cross-icon"
+             xlink:href="img/sprite.svg#icon-cross"></use>
+        <use class="refresh-icon"
+             xlink:href="img/sprite.svg#icon-refresh"></use>
+      </svg>
+    </button>
+    <button class="btn-reset commentary__controls-btn commentary__controls-btn--pin"
+            type="button"
+            title="@if(context.isPinned){Открепить}@if(!context.isPinned){Закрепить}"
+            aria-label="@if(context.isPinned){Открепить}@if(!context.isPinned){Закрепить}">
+      <svg width="18"
+           height="18"
+           aria-hidden="true">
+        <use class="pin-icon"
+             xlink:href="img/sprite.svg#icon-pin"></use>
+        <use class="pin-active-icon"
+             xlink:href="img/sprite.svg#icon-pin-active"></use>
+      </svg>
+    </button>
+  </div>
+</div>

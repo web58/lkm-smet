@@ -1,0 +1,27 @@
+<section class="add-client">
+  <div class="container add-client__inner">
+    <h1 class="visually-hidden">Создание клиента</h1>
+    <div class="add-client__controls">
+      <button class="btn-reset btn">Сохранить</button>
+      @if(context.step === 'step-4'){
+      <button class="btn-reset btn btn--second btn--icon-reverse">
+        <span>В карточку</span>
+        <svg width="16"
+             height="16"
+             aria-hidden="true">
+          <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
+      }
+    </div>
+    <header class="add-client__header">
+      <ol class="list-reset add-client__steps">
+        <li class="add-client__step@if(context.step === 'step-1'){ add-client__step--current}">Данные клиента</li>
+        <li class="add-client__step@if(context.step === 'step-2'){ add-client__step--current}">Ключи</li>
+        <li class="add-client__step@if(context.step === 'step-3'){ add-client__step--current}">Нормативные базы</li>
+        <li class="add-client__step@if(context.step === 'step-4'){ add-client__step--current}">Договор</li>
+      </ol>
+    </header>
+    @include('@step.html')
+  </div>
+</section>

@@ -1,0 +1,33 @@
+.site-header {
+  --header-bg: var(--white);
+
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  height: var(--header-height);
+  color: var(--main-text);
+  background-color: var(--header-bg);
+  min-width: var(--min-screen-width);
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    flex-shrink: 0;
+
+    & img {
+      display: block;
+      width: 173px;
+      height: 32px;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+  }
+}

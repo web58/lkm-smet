@@ -1,0 +1,20 @@
+<div class="client-history"
+     data-tabs="history">
+  <ul class="list-reset client-history__nav"
+      data-tabs="nav">
+    <li>
+      <button class="btn-reset client-history__nav-btn"
+              type="button"
+              data-tabs="btn">Запросы</button>
+    </li>
+    <li>
+      <button class="btn-reset client-history__nav-btn"
+              type="button"
+              data-tabs="btn">Переходы</button>
+    </li>
+  </ul>
+  <div>
+    <div data-tabs="panel">@include('table-request.html', {isEmpty: true, noResultText: 'Запросов пока нет'})</div>
+    <div data-tabs="panel">@include('table-following.html', {isEmpty: true, noResultText: 'Переходов пока нет'})</div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+.visually-hidden:not(:focus):not(:active),
+input[type="radio"].visually-hidden,
+input[type="checkbox"].visually-hidden {
+  @include visually-hidden;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 960px;
+
+  @include media-min (1200px) {
+    max-width: 1140px;
+  }
+
+  @include media-min (1600px) {
+    max-width: 1620px;
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.is-block-scroll {
+  overflow: hidden;
+}
+
+.indent-reset {
+  @include indent-reset;
+}
+
+.list-reset {
+  @include list-reset;
+}
+
+.btn-reset {
+  @include btn-reset;
+}
+
+.is-expires {
+  --activity-color: var(--yellow);
+}
+
+.is-expired {
+  --activity-color: var(--orange);
+}

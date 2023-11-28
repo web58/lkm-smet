@@ -1,0 +1,42 @@
+.client-organization {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  column-gap: 30px;
+  justify-items: stretch;
+  align-items: start;
+
+  &__contacts {
+    padding: 20px;
+    border-radius: 4px;
+    color: var(--main-text);
+    background-color: var(--main-bg-light);
+    border: 1px solid var(--border);
+    max-width: 780px;
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+    column-gap: 30px;
+    margin-bottom: 20px;
+  }
+
+  &__add-contact-btn {
+    width: 100%;
+  }
+
+  @include media-min (1200px) {
+    grid-template-columns: 350px 1fr;
+  }
+
+  @include media-min (1600px) {
+    grid-template-columns: 510px 1fr;
+  }
+}

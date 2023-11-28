@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  @include('html/head/index.html')
+  <title>Реестр</title>
+</head>
+
+<body class="indent-reset site">
+  @include('html/header/index.html', {current: 'registry'})
+  <div class="site__container">
+    <main class="site__content">
+      @include('html/registry/index.html')
+    </main>
+  </div>
+  @include('html/common/scripts.html')
+</body>
+
+</html>

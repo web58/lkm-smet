@@ -1,0 +1,61 @@
+.profile-contract {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  &.is-closed {
+    filter: grayscale(1) opacity(0.7);
+  }
+
+  &__label {
+    font-weight: 600;
+    opacity: 0.8;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    flex-grow: 1;
+    margin-bottom: 12px;
+
+    & a {
+      display: inline-block;
+      font-weight: 600;
+      font-size: 18px;
+      color: var(--activity-color);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__tariff {
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  &__period {
+    display: flex;
+    align-items: center;
+
+    & svg {
+      width: 16px;
+      height: 16px;
+      color: var(--activity-color);
+      margin-right: 8px;
+    }
+  }
+
+  @include media-min (1600px) {
+    &__bottom {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__tariff {
+      margin-bottom: 0;
+    }
+  }
+}

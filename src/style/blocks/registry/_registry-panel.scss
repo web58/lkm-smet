@@ -1,0 +1,29 @@
+.registry-panel {
+  --registry-panel-height: var(--instruments-panel-height);
+  --registry-panel-offset: var(--header-height);
+
+  position: fixed;
+  top: var(--registry-panel-offset);
+  left: 0;
+  width: 100%;
+  height: var(--registry-panel-height);
+  background-color: var(--main-bg);
+  display: flex;
+  flex-direction: column;
+  min-width: var(--min-screen-width);
+
+  &__inner {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    margin: -4px;
+  }
+
+  &__btn {
+    margin: 4px;
+  }
+
+  &__send-mail {
+    margin-left: auto;
+  }
+}
